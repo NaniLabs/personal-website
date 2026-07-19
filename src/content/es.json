@@ -1,0 +1,282 @@
+{
+  "locale": "es",
+  "seo": {
+    "title": "Ignacio Exequiel Meoniz | Portfolio",
+    "description": "Portfolio personal de Ignacio Exequiel Meoniz, estudiante de Sistemas de Información con proyectos en desarrollo de software, automatización y aplicaciones multiplataforma.",
+    "keywords": [
+      "Ignacio Exequiel Meoniz",
+      "portfolio",
+      "React",
+      "TypeScript",
+      "Flutter",
+      "Cloudflare",
+      "UADER"
+    ],
+    "ogImage": "/og-cover.svg"
+  },
+  "navigation": {
+    "about": "Sobre mí",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos",
+    "certificates": "Certificados",
+    "participations": "Participaciones",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "labels": {
+    "languageSwitch": "Cambiar idioma",
+    "currentLanguage": "Español",
+    "backToTop": "Volver arriba",
+    "viewMore": "Ver más",
+    "featured": "Destacado",
+    "highlightedAction": "Ver proyecto",
+    "comingSoon": "Próximamente",
+    "contactByEmail": "Enviar email",
+    "formNote": "Este formulario está preparado para conectarse a un backend más adelante.",
+    "noItemsYet": "Todavía no hay elementos cargados en esta sección."
+  },
+  "sections": {
+    "hero": {
+      "name": "Ignacio Exequiel Meoniz",
+      "role": "Estudiante de Sistemas de Información y desarrollador de proyectos personales",
+      "summary": "Soy estudiante de Licenciatura y Analista en Sistemas de Información en UADER. Me interesa el desarrollo de software, las aplicaciones multiplataforma, la automatización, las herramientas útiles y la inteligencia artificial aplicada al desarrollo.",
+      "location": "Oro Verde, Entre Ríos, Argentina",
+      "availability": "Abierto a seguir construyendo y aprendiendo",
+      "photo": "",
+      "actions": [
+        {
+          "label": "Descargar CV",
+          "url": "/documents/ignacio-exequiel-meoniz-cv.pdf",
+          "variant": "primary",
+          "download": true
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/NaniLabs",
+          "variant": "secondary",
+          "external": true
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
+          "variant": "secondary",
+          "external": true
+        },
+        {
+          "label": "Contacto",
+          "url": "#contacto",
+          "variant": "ghost"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "Perfil",
+      "title": "Desarrollo, soporte técnico y aprendizaje continuo",
+      "description": "Un perfil en formación, con foco práctico y ganas de construir herramientas útiles.",
+      "body": [
+        "Actualmente estudio Licenciatura y Analista en Sistemas de Información en UADER. Me interesa crear software que resuelva problemas concretos, especialmente en desarrollo web, aplicaciones multiplataforma, automatización e inteligencia artificial aplicada al proceso de desarrollo.",
+        "Además de mis estudios, desarrollé proyectos personales y realicé soporte técnico informático de manera independiente. Esa combinación me ayudó a fortalecer tanto la parte técnica como la resolución práctica de problemas."
+      ]
+    },
+    "technologies": {
+      "eyebrow": "Stack",
+      "title": "Tecnologías que uso",
+      "description": "Organizadas por área para reflejar con claridad mi experiencia actual.",
+      "categories": [
+        {
+          "category": "Frontend",
+          "items": ["React", "TypeScript"]
+        },
+        {
+          "category": "Mobile",
+          "items": ["Flutter", "Dart"]
+        },
+        {
+          "category": "Backend",
+          "items": ["Python", "Node.js (básico)"]
+        },
+        {
+          "category": "Desktop",
+          "items": ["C++", "Qt"]
+        },
+        {
+          "category": "Cloud",
+          "items": ["Cloudflare Pages", "Cloudflare Workers"]
+        },
+        {
+          "category": "Bases de datos",
+          "items": ["SQLite"]
+        },
+        {
+          "category": "Herramientas",
+          "items": ["Git", "GitHub", "VS Code", "Visual Studio", "PowerShell"]
+        },
+        {
+          "category": "Idiomas",
+          "items": ["Español nativo", "Inglés técnico"]
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "Proyectos",
+      "title": "Trabajo personal y herramientas construidas a partir de necesidades reales",
+      "description": "DoBre ocupa el lugar principal del portfolio y el resto de los proyectos muestran otras áreas de trabajo y aprendizaje.",
+      "items": [
+        {
+          "slug": "dobre",
+          "name": "DoBre",
+          "description": "Aplicación desarrollada para ayudar a vendedores de Mercado Libre a calcular automáticamente el precio de publicación según cuánto dinero desean recibir luego de comisiones, costos de envío, impuestos y otros cargos.",
+          "year": "2026",
+          "status": "Finalizado",
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "Cloudflare Workers",
+            "Cloudflare Pages",
+            "TypeScript",
+            "React",
+            "REST APIs"
+          ],
+          "demo": "https://dobre.pages.dev/",
+          "github": "https://github.com/NaniLabs/DoBre",
+          "documentation": "https://devpost.com/software/dobre",
+          "featuredButtonLabel": "Ver proyecto",
+          "featured": true,
+          "order": 1
+        },
+        {
+          "slug": "aquamarine",
+          "name": "Aquamarine",
+          "description": "Sistema de gestión de inventario, ventas y reparaciones desarrollado en C++, Qt y SQLite.",
+          "year": "TODO_AÑO_PROYECTO_AQUAMARINE",
+          "status": "Finalizado",
+          "technologies": ["C++", "Qt", "SQLite"],
+          "github": "https://github.com/NaniLabs/FreeSoft",
+          "featured": false,
+          "order": 2
+        },
+        {
+          "slug": "organeyes",
+          "name": "OrganEyes",
+          "description": "Aplicación para Windows que organiza automáticamente archivos según su extensión y tipo.",
+          "year": "TODO_AÑO_PROYECTO_ORGANEYES",
+          "status": "Finalizado",
+          "technologies": ["Python"],
+          "github": "https://github.com/NaniLabs/FreeSoft",
+          "featured": false,
+          "order": 3
+        }
+      ]
+    },
+    "certificates": {
+      "eyebrow": "Certificados",
+      "title": "Certificaciones",
+      "description": "Próximamente se agregarán certificaciones y credenciales verificables.",
+      "items": []
+    },
+    "participations": {
+      "eyebrow": "Participaciones",
+      "title": "Eventos y competencias",
+      "description": "Espacios donde participé presentando proyectos y explorando nuevas herramientas.",
+      "items": [
+        {
+          "name": "OpenAI Build Week 2026",
+          "description": "Competencia internacional organizada por OpenAI donde desarrollé y presenté DoBre utilizando herramientas de inteligencia artificial como apoyo durante el desarrollo. Proyecto publicado en Devpost.",
+          "year": "2026",
+          "result": "Proyecto enviado."
+        }
+      ]
+    },
+    "experience": {
+      "eyebrow": "Experiencia",
+      "title": "Trabajo técnico y experiencia práctica",
+      "description": "Experiencias reales que complementan mi formación y mis proyectos personales.",
+      "items": [
+        {
+          "title": "Soporte Técnico Informático",
+          "subtitle": "Independiente",
+          "period": "2021 - Actualidad",
+          "description": "Trabajo independiente de soporte técnico informático orientado a diagnóstico, reparación y mantenimiento.",
+          "achievements": [
+            "Diagnóstico y reparación de computadoras.",
+            "Instalación y configuración de Windows.",
+            "Resolución de problemas de hardware y software.",
+            "Mantenimiento preventivo y correctivo."
+          ]
+        },
+        {
+          "title": "Cadetería y reparto en moto",
+          "subtitle": "Trabajo independiente",
+          "period": "2022",
+          "description": "Experiencia de trabajo en calle con foco en organización, cumplimiento y trato con clientes.",
+          "achievements": [
+            "Entrega de pedidos.",
+            "Atención al cliente.",
+            "Organización de recorridos."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "eyebrow": "Educación",
+      "title": "Formación académica",
+      "description": "Trayectoria educativa actual y formación secundaria completa.",
+      "items": [
+        {
+          "title": "Licenciatura en Sistemas de Información",
+          "subtitle": "Universidad Autónoma de Entre Ríos (UADER)",
+          "period": "2024 - Actualidad",
+          "description": "Carrera universitaria en curso enfocada en sistemas de información y formación técnica aplicada.",
+          "achievements": [
+            "Formación en análisis y desarrollo de sistemas.",
+            "Aprendizaje continuo en programación y resolución de problemas.",
+            "Construcción de proyectos personales como complemento práctico."
+          ]
+        },
+        {
+          "title": "Analista en Sistemas de Información",
+          "subtitle": "Universidad Autónoma de Entre Ríos (UADER)",
+          "period": "2024 - Actualidad",
+          "description": "Formación paralela orientada a bases conceptuales y técnicas del desarrollo de sistemas.",
+          "achievements": [
+            "Estudio de herramientas y metodologías vinculadas al software.",
+            "Desarrollo de criterio técnico a partir de la práctica y el aprendizaje formal.",
+            "Enfoque en seguir ampliando conocimientos aplicables a proyectos reales."
+          ]
+        },
+        {
+          "title": "Educación Secundaria Completa",
+          "subtitle": "Escuela Normal Superior en Lenguas Vivas Ernesto A. Bavio",
+          "period": "Egreso 2024",
+          "description": "Finalización de estudios secundarios.",
+          "achievements": [
+            "Título secundario completo."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Podés escribirme por email o visitar mis perfiles profesionales para conocer más sobre mi trabajo y mis proyectos.",
+      "email": "meonizignacioexequiel@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
+      "github": "https://github.com/NaniLabs",
+      "submitLabel": "Enviar mensaje",
+      "fields": {
+        "name": "Nombre",
+        "email": "Email",
+        "message": "Mensaje"
+      }
+    }
+  },
+  "footer": {
+    "message": "Portfolio desarrollado con React, TypeScript, Vite y Tailwind CSS.",
+    "copyright": "Ignacio Exequiel Meoniz. Todos los derechos reservados."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La ruta que intentaste abrir no existe o fue movida. Podés volver al inicio para seguir recorriendo el portfolio.",
+    "action": "Volver al inicio"
+  }
+}

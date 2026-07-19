@@ -1,0 +1,11 @@
+{
+  "siteName": "Ignacio Meoniz",
+  "siteUrl": "TODO_PUBLIC_PORTFOLIO_URL",
+  "defaultLocale": "es",
+  "storageKey": "cvpage-locale",
+  "email": "meonizignacioexequiel@gmail.com",
+  "social": {
+    "github": "https://github.com/NaniLabs",
+    "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415"
+  }
+}

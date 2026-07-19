@@ -1,50 +1,89 @@
-# Portfolio Profesional
+# NaniLabs Portfolio
 
-Portfolio bilingue, editable desde JSON y listo para crecer con React, TypeScript, Vite, Tailwind CSS y Cloudflare Pages.
+Personal portfolio of **Ignacio Meoniz**, Software Developer and creator of **DoBre**.
 
-## Ejecutar
+🌐 **Live Website:** https://nanilabs.lat
+
+## About
+
+This portfolio was built to showcase my projects, experience, education, and technical skills.
+
+### Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Cloudflare Pages
+
+## Features
+
+- 🌎 Bilingual (Spanish / English)
+- 📱 Responsive design
+- 🌙 Dark mode
+- ⚡ Fast static site generation
+- 🔍 SEO optimized
+- 🗺️ Sitemap & robots.txt
+- ☁️ Cloudflare Pages deployment
+- 📝 JSON-driven content management
+
+## Getting Started
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Run the development server:
+
+```bash
 npm run dev
 ```
 
-Para generar produccion:
+Build for production:
 
 ```bash
 npm run build
 ```
 
-## Donde editar el contenido
+## Content Management
 
-Todo el contenido visible se modifica sin tocar componentes:
+All visible content is stored in JSON files.
 
-- `src/content/site.json`: datos globales del sitio, URL canonica, redes principales y locale por defecto.
-- `src/content/es.json`: contenido completo en espanol.
-- `src/content/en.json`: contenido completo en ingles.
+```
+src/content/
+├── site.json
+├── es.json
+└── en.json
+```
 
-## Como agregar un proyecto
+This allows updating projects, experience, education, certificates, and personal information without modifying the React components.
 
-1. Agrega un nuevo objeto dentro de `sections.projects.items` en `es.json`.
-2. Duplica ese proyecto traducido en `en.json`.
-3. Completa campos como `name`, `description`, `year`, `status`, `technologies`, `order` y los links opcionales.
-4. Si quieres imagen propia, guarda el archivo dentro de `public/images/projects/` y apunta `image` a esa ruta.
+## Deployment
 
-## Como agregar un certificado
+This project is configured for **Cloudflare Pages**.
 
-1. Agrega un objeto en `sections.certificates.items` en ambos JSON.
-2. Usa `image` para una portada visual y `pdf` o `link` si quieres abrir una credencial.
-3. Si subes archivos locales, colocalos en `public/images/certificates/` o `public/documents/`.
+Build command:
 
-## Como agregar experiencia o educacion
+```bash
+npm run build
+```
 
-1. Agrega un objeto nuevo dentro de `sections.experience.items` o `sections.education.items`.
-2. Mantiene la misma estructura: `title`, `subtitle`, `period`, `description` y `achievements`.
-3. Traduce el mismo bloque en `en.json` para que ambos idiomas queden completos.
+Output directory:
 
-## Despliegue en Cloudflare Pages
+```bash
+dist
+```
 
-- Comando de build: `npm run build`
-- Directorio de salida: `dist`
+## Links
 
-`public/_redirects` ya esta incluido para que el routing del portfolio funcione correctamente como SPA.
+- 🌐 Portfolio: https://nanilabs.lat
+- 💻 GitHub: https://github.com/NaniLabs
+- 💼 LinkedIn: https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415
+
+## License
+
+Copyright © 2026 Ignacio Meoniz.
+
+All Rights Reserved.

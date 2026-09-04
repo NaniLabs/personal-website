@@ -20,10 +20,10 @@ export function HomePage({ portfolio }: HomePageProps) {
       <AboutSection portfolio={portfolio} />
       <TechnologiesSection portfolio={portfolio} />
       <ProjectsSection portfolio={portfolio} />
-      <CertificatesSection portfolio={portfolio} />
       <ParticipationsSection portfolio={portfolio} />
       <TimelineSection id={sectionIds.experience} section={portfolio.content.sections.experience} />
       <TimelineSection id={sectionIds.education} section={portfolio.content.sections.education} />
+      <CertificatesSection portfolio={portfolio} />
       <ContactSection portfolio={portfolio} />
     </main>
   )

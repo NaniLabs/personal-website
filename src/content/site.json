@@ -1,9 +1,13 @@
 {
-  "siteName": "Ignacio Meoniz",
-  "siteUrl": "TODO_PUBLIC_PORTFOLIO_URL",
+  "siteName": "Ignacio Exequiel Meoniz",
+  "siteUrl": "https://ceo.nanilabs.lat",
   "defaultLocale": "es",
   "storageKey": "cvpage-locale",
   "email": "meonizignacioexequiel@gmail.com",
+  "phone": "3444 463754",
+  "location": "Oro Verde, Entre Ríos, Argentina",
+  "profileImage": "/images/profile.jpg",
+  "cvPath": "/documents/ignacio-exequiel-meoniz-cv.pdf",
   "social": {
     "github": "https://github.com/NaniLabs",
     "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415"

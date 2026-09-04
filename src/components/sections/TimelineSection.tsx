@@ -10,29 +10,34 @@ export function TimelineSection({ id, section }: TimelineSectionProps) {
   return (
     <section id={id} className="section-shell py-12 sm:py-16">
       <SectionHeader eyebrow={section.eyebrow} title={section.title} description={section.description} />
-      <div className="mt-8 space-y-4">
-        {section.items.map((item) => (
-          <article key={`${item.title}-${item.period}`} className="panel p-6 sm:p-8">
-            <div className="grid gap-5 lg:grid-cols-[0.34fr_0.66fr]">
-              <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">{item.period}</p>
-                <h3 className="mt-3 font-display text-2xl text-white">{item.title}</h3>
-                <p className="mt-2 text-neutral-400">{item.subtitle}</p>
+      <div className="mt-8 relative">
+        <div className="space-y-8">
+          {section.items.map((item, index) => (
+            <article
+              key={`${item.title}-${item.period}-${index}`}
+              className="relative"
+            >
+              <div className="timeline-dot" aria-hidden="true" />
+              <div className="pl-10 sm:pl-[34%]">
+                <div className="panel p-6 sm:p-7" style={{ borderColor: 'var(--color-border)' }}>
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-accent)]">{item.period}</p>
+                  <h3 className="mt-2 font-display text-xl text-[var(--color-text)] sm:text-2xl">{item.title}</h3>
+                  <p className="mt-1 text-sm text-[var(--color-text-muted)]">{item.subtitle}</p>
+                  <p className="mt-4 text-base leading-7 text-[var(--color-text-muted)]">{item.description}</p>
+                  <ul className="mt-5 space-y-3 text-sm leading-7 text-[var(--color-text-subtle)]">
+                    {item.achievements.map((achievement) => (
+                      <li key={achievement} className="flex gap-3">
+                        <span className="mt-2.5 flex-shrink-0 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" aria-hidden="true" />
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div>
-                <p className="text-base leading-8 text-neutral-300">{item.description}</p>
-                <ul className="mt-5 space-y-3 text-sm leading-7 text-neutral-400">
-                  {item.achievements.map((achievement) => (
-                    <li key={achievement} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
+        <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-[var(--color-border)] sm:left-[calc(34%_-_2px)]" aria-hidden="true" />
       </div>
     </section>
   )

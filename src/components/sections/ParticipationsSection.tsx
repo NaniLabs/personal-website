@@ -16,21 +16,31 @@ export function ParticipationsSection({ portfolio }: ParticipationsSectionProps)
       <SectionHeader eyebrow={section.eyebrow} title={section.title} description={section.description} />
       <div className="mt-8 grid gap-4">
         {section.items.map((item) => (
-          <article key={`${item.name}-${item.year}`} className="panel p-6 sm:p-7">
+          <article key={`${item.name}-${item.year}`} className="panel p-6 sm:p-7" style={{ borderColor: 'var(--color-border)' }}>
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex gap-4">
                 {item.logo ? (
-                  <img src={item.logo} alt={item.name} loading="lazy" className="h-14 w-14 rounded-2xl border border-white/10 bg-white/6 p-2" />
-                ) : null}
+                  <img
+                    src={item.logo}
+                    alt=""
+                    loading="lazy"
+                    className="h-14 w-14 rounded-xl border bg-[var(--color-bg-elevated)] p-2"
+                    style={{ borderColor: 'var(--color-border)' }}
+                  />
+                ) : (
+                  <div className="h-14 w-14 rounded-xl border flex items-center justify-center flex-shrink-0" style={{ borderColor: 'var(--color-border)', backgroundColor: 'var(--color-bg-elevated)' }}>
+                    <Trophy className="h-7 w-7 text-[var(--color-accent)]" aria-hidden="true" />
+                  </div>
+                )}
                 <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">{item.year}</p>
-                  <h3 className="mt-2 font-display text-2xl text-white">{item.name}</h3>
-                  <p className="mt-3 max-w-3xl text-neutral-400">{item.description}</p>
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-accent)]">{item.year}</p>
+                  <h3 className="mt-2 font-display text-xl text-[var(--color-text)]">{item.name}</h3>
+                  <p className="mt-3 max-w-3xl text-sm text-[var(--color-text-muted)]">{item.description}</p>
                 </div>
               </div>
               {item.result ? (
-                <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/8 px-4 py-2 text-sm text-cyan-100">
-                  <Trophy className="h-4 w-4" />
+                <div className="inline-flex items-center gap-2 rounded-full border bg-[var(--color-accent)]/10 px-4 py-2 text-sm text-[var(--color-accent)]" style={{ borderColor: 'var(--color-accent)' }}>
+                  <Trophy className="h-4 w-4" aria-hidden="true" />
                   {item.result}
                 </div>
               ) : null}

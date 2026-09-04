@@ -9,7 +9,8 @@ interface LanguageSwitcherProps {
 export function LanguageSwitcher({ locale, onChange, ariaLabel }: LanguageSwitcherProps) {
   return (
     <div
-      className="inline-flex items-center rounded-full border border-white/10 bg-white/6 p-1"
+      className="inline-flex items-center rounded-full border bg-[var(--color-bg-card)] p-1"
+      style={{ borderColor: 'var(--color-border)' }}
       aria-label={ariaLabel}
       role="group"
     >
@@ -18,15 +19,18 @@ export function LanguageSwitcher({ locale, onChange, ariaLabel }: LanguageSwitch
           key={item}
           type="button"
           onClick={() => onChange(item)}
-          className={
-            locale === item
-              ? 'rounded-full bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-neutral-950 transition'
-              : 'rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-neutral-400 transition hover:text-white'
-          }
+          className={cn(
+            'lang-btn rounded-full transition',
+            locale === item ? 'lang-btn-active' : 'lang-btn-inactive'
+          )}
         >
-          {item}
+          {item.toUpperCase()}
         </button>
       ))}
     </div>
   )
+}
+
+function cn(...classes: (string | undefined | null | false)[]) {
+  return classes.filter(Boolean).join(' ')
 }

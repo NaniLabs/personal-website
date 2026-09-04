@@ -14,19 +14,20 @@ function App() {
   useSeo(portfolio)
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-[-18rem] h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-cyan-500/16 blur-3xl" />
-        <div className="absolute bottom-[-12rem] right-[-6rem] h-[24rem] w-[24rem] rounded-full bg-fuchsia-500/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_42%),linear-gradient(180deg,_rgba(255,255,255,0.03),_transparent_18%)]" />
+    <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div className="absolute left-1/2 top-[-12rem] h-[24rem] w-[24rem] -translate-x-1/2 rounded-full bg-[var(--color-accent)]/10 blur-3xl" />
+        <div className="absolute bottom-[-8rem] right-[-4rem] h-[16rem] w-[16rem] rounded-full bg-[var(--color-accent-violet)]/8 blur-3xl" />
       </div>
 
       <Navbar portfolio={portfolio} />
 
-      <Routes>
-        <Route path="/" element={<HomePage portfolio={portfolio} />} />
-        <Route path="*" element={<NotFoundPage portfolio={portfolio} />} />
-      </Routes>
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<HomePage portfolio={portfolio} />} />
+          <Route path="*" element={<NotFoundPage portfolio={portfolio} />} />
+        </Routes>
+      </main>
 
       <Footer portfolio={portfolio} />
       <ScrollToTopButton label={portfolio.content.labels.backToTop} />

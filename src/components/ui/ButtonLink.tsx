@@ -13,9 +13,9 @@ interface ButtonLinkProps {
 
 const variants = {
   primary:
-    'bg-cyan-300 text-neutral-950 hover:bg-cyan-200 shadow-[0_12px_40px_rgba(34,211,238,0.2)]',
-  secondary: 'border border-white/12 bg-white/6 text-white hover:bg-white/10',
-  ghost: 'text-neutral-300 hover:bg-white/6 hover:text-white',
+    'bg-[var(--color-accent-gradient)] text-[var(--color-bg)] shadow-[var(--shadow-glow)] hover:shadow-[0_0_40px_rgba(34,211,238,0.25)]',
+  secondary: 'border bg-[var(--color-bg-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)]',
+  ghost: 'text-[var(--color-text-muted)] hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-text)]',
 }
 
 export function ButtonLink({
@@ -26,17 +26,17 @@ export function ButtonLink({
   download = false,
   className,
 }: ButtonLinkProps) {
+  const baseStyles = 'inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all duration-300 focus-ring'
+
+  const borderStyle = variant === 'secondary' ? 'border-[var(--color-border)]' : 'border-transparent'
+
   return (
     <a
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noreferrer' : undefined}
       download={download}
-      className={cn(
-        'inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition duration-300',
-        variants[variant],
-        className,
-      )}
+      className={cn(baseStyles, borderStyle, variants[variant], className)}
     >
       <span>{label}</span>
       {download ? <Download className="h-4 w-4" /> : external ? <ArrowUpRight className="h-4 w-4" /> : null}

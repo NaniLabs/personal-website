@@ -7,9 +7,12 @@ interface SectionHeaderProps {
 export function SectionHeader({ eyebrow, title, description }: SectionHeaderProps) {
   return (
     <div className="max-w-2xl">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-300">{eyebrow}</p>
-      <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">{title}</h2>
-      <p className="mt-4 text-base leading-7 text-neutral-400 sm:text-lg">{description}</p>
+      <div className="section-header-accent">
+        <div className="section-header-accent-line" aria-hidden="true" />
+        <p className="section-header-eyebrow">{eyebrow}</p>
+      </div>
+      <h2 className="section-header-title">{title}</h2>
+      <p className="section-header-description">{description}</p>
     </div>
   )
 }

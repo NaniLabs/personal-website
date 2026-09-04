@@ -14,14 +14,11 @@ export function TechnologiesSection({ portfolio }: TechnologiesSectionProps) {
       <SectionHeader eyebrow={section.eyebrow} title={section.title} description={section.description} />
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {section.categories.map((category) => (
-          <article key={category.category} className="panel p-6">
-            <h3 className="font-display text-xl text-white">{category.category}</h3>
+          <article key={category.category} className="panel p-6" style={{ borderColor: 'var(--color-border)' }}>
+            <h3 className="font-display text-xl text-[var(--color-text)]">{category.category}</h3>
             <div className="mt-5 flex flex-wrap gap-2">
               {category.items.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-sm text-neutral-300"
-                >
+                <span key={item} className="tech-tag">
                   {item}
                 </span>
               ))}

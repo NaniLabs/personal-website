@@ -2,26 +2,33 @@
   "locale": "en",
   "seo": {
     "title": "Ignacio Exequiel Meoniz | Portfolio",
-    "description": "Personal portfolio of Ignacio Exequiel Meoniz, an Information Systems student with projects in software development, automation, and cross-platform applications.",
+    "description": "Personal portfolio of Ignacio Exequiel Meoniz, Information Systems student at UADER. Projects in C++, Dart, Flutter, Python, Qt, and SQLite.",
     "keywords": [
       "Ignacio Exequiel Meoniz",
-      "portfolio",
-      "React",
-      "TypeScript",
+      "Portfolio",
+      "UADER",
+      "Information Systems",
+      "C++",
       "Flutter",
-      "Cloudflare",
-      "UADER"
+      "Python",
+      "Qt",
+      "SQLite",
+      "DoBre",
+      "DoubleLink",
+      "Aquamarine",
+      "OrganEyes",
+      "FreeSoft"
     ],
     "ogImage": "/og-cover.svg"
   },
   "navigation": {
     "about": "About",
-    "technologies": "Technologies",
+    "technologies": "Skills",
     "projects": "Projects",
-    "certificates": "Certificates",
     "participations": "Participations",
     "experience": "Experience",
     "education": "Education",
+    "certificates": "Certificates",
     "contact": "Contact"
   },
   "labels": {
@@ -30,23 +37,23 @@
     "backToTop": "Back to top",
     "viewMore": "View more",
     "featured": "Featured",
-    "highlightedAction": "View project",
+    "highlightedAction": "Open",
     "comingSoon": "Coming soon",
     "contactByEmail": "Send email",
-    "formNote": "This form is ready to be connected to a backend later.",
+    "formNote": "Protected message sent directly to my inbox.",
     "noItemsYet": "There are no items in this section yet."
   },
   "sections": {
     "hero": {
       "name": "Ignacio Exequiel Meoniz",
-      "role": "Information Systems student and builder of personal software projects",
-      "summary": "I am currently studying for both a Bachelor's degree and a Systems Analyst degree in Information Systems at UADER. I am interested in software development, cross-platform applications, automation, useful tools, and AI as part of the development process.",
+      "role": "Information Systems Student & Developer",
+      "summary": "Information Systems and Systems Analyst student at UADER. Interested in software development, automation, and data analysis. Practical experience in technical support and personal project development using C++, Dart, Flutter, Python, Qt, and SQLite.",
       "location": "Oro Verde, Entre Ríos, Argentina",
-      "availability": "Open to keep building and learning",
-      "photo": "",
+      "availability": "Open to projects and new challenges",
+      "photo": "/images/profile.jpg",
       "actions": [
         {
-          "label": "Download resume",
+          "label": "Download CV",
           "url": "/documents/ignacio-exequiel-meoniz-cv.pdf",
           "variant": "primary",
           "download": true
@@ -72,211 +79,229 @@
     },
     "about": {
       "eyebrow": "Profile",
-      "title": "Software development, technical support, and continuous learning",
-      "description": "A practical profile in progress, focused on building useful tools and growing through real work.",
+      "title": "About Me",
+      "description": "Information Systems student focused on software development, automation, and IT support.",
       "body": [
-        "I am currently studying Information Systems at UADER. I am especially interested in building software that solves concrete problems, with a focus on web development, cross-platform applications, automation, and AI-assisted development workflows.",
-        "Alongside my studies, I have worked on personal projects and provided independent IT technical support. That combination has helped me strengthen both my technical skills and my practical approach to problem solving."
+        "Information Systems and Systems Analyst student at UADER. Interested in software development, automation, and data analysis. Practical experience in technical support and personal project development using C++, Dart, Flutter, Python, Qt, and SQLite."
       ]
     },
     "technologies": {
-      "eyebrow": "Stack",
-      "title": "Technologies I use",
-      "description": "Organized by area to reflect my current experience clearly and honestly.",
+      "eyebrow": "Skills",
+      "title": "Skills & Technologies",
+      "description": "Tools and technologies applied in personal projects, IT support, and academic coursework.",
       "categories": [
         {
-          "category": "Frontend",
-          "items": ["React", "TypeScript"]
-        },
-        {
-          "category": "Mobile",
-          "items": ["Flutter", "Dart"]
-        },
-        {
-          "category": "Backend",
-          "items": ["Python", "Node.js (basic)"]
-        },
-        {
-          "category": "Desktop",
-          "items": ["C++", "Qt"]
-        },
-        {
-          "category": "Cloud",
-          "items": ["Cloudflare Pages", "Cloudflare Workers"]
+          "category": "Programming",
+          "items": ["C++", "Dart", "Python", "JavaScript (basic)"]
         },
         {
           "category": "Databases",
-          "items": ["SQLite"]
+          "items": ["SQLite", "SQL (basic)"]
         },
         {
           "category": "Tools",
-          "items": ["Git", "GitHub", "VS Code", "Visual Studio", "PowerShell"]
+          "items": [
+            "Git",
+            "GitHub",
+            "Flutter",
+            "Qt Framework",
+            "Trello",
+            "Visual Studio",
+            "Cloudflare",
+            "PowerShell"
+          ]
+        },
+        {
+          "category": "IT & Systems",
+          "items": [
+            "Windows",
+            "Technical support",
+            "Basic networking",
+            "Microsoft Office (Excel, Word)",
+            "Google Sheets"
+          ]
+        },
+        {
+          "category": "Other",
+          "items": [
+            "Technical documentation",
+            "AI tools applied to software development"
+          ]
         },
         {
           "category": "Languages",
-          "items": ["Native Spanish", "Technical English"]
+          "items": [
+            "Spanish (Native)",
+            "English (Reading comprehension and technical documentation comprehension)"
+          ]
+        },
+        {
+          "category": "Strengths",
+          "items": [
+            "Problem solving",
+            "Autonomous learning",
+            "Attention to detail",
+            "Adaptability",
+            "Independent work"
+          ]
         }
       ]
     },
     "projects": {
       "eyebrow": "Projects",
-      "title": "Personal work built around real needs and practical ideas",
-      "description": "DoBre is the main project in the portfolio, while the others show additional areas of work and learning.",
+      "title": "Personal Projects",
+      "description": "Software and applications developed with a practical focus, utility, and problem-solving approach.",
       "items": [
         {
-          "slug": "dobre",
-          "name": "DoBre",
-          "description": "An application built to help Mercado Libre sellers automatically calculate their listing price based on how much money they want to receive after commissions, shipping costs, taxes, and other charges.",
-          "year": "2026",
-          "status": "Completed",
-          "technologies": [
-            "Flutter",
-            "Dart",
-            "Cloudflare Workers",
-            "Cloudflare Pages",
-            "TypeScript",
-            "React",
-            "REST APIs"
-          ],
-          "demo": "https://dobre.pages.dev/",
-          "github": "https://github.com/NaniLabs/DoBre",
-          "documentation": "https://devpost.com/software/dobre",
-          "featuredButtonLabel": "View project",
-          "featured": true,
+          "slug": "freesoft",
+          "name": "FreeSoft",
+          "description": "",
+          "technologies": [],
+          "github": "https://github.com/NaniLabs/FreeSoft",
+          "featured": false,
           "order": 1
         },
         {
           "slug": "aquamarine",
           "name": "Aquamarine",
-          "description": "Inventory, sales, and repair management system built with C++, Qt, and SQLite.",
-          "year": "TODO_AÑO_PROYECTO_AQUAMARINE",
-          "status": "Completed",
+          "description": "Inventory, sales, and repair management system for a technical service shop.",
           "technologies": ["C++", "Qt", "SQLite"],
-          "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 2
         },
         {
           "slug": "organeyes",
           "name": "OrganEyes",
-          "description": "Windows application that automatically sorts files by extension and file type.",
-          "year": "TODO_AÑO_PROYECTO_ORGANEYES",
-          "status": "Completed",
-          "technologies": ["Python"],
-          "github": "https://github.com/NaniLabs/FreeSoft",
+          "description": "Windows application that automatically organizes files according to extensions and file types.",
+          "technologies": ["C++", "Qt"],
           "featured": false,
           "order": 3
+        },
+        {
+          "slug": "dobre",
+          "name": "DoBre",
+          "tag": "Participating project in a hackathon organized by OpenAI — 2026",
+          "description": "Cross-platform platform (Windows, Android, and Web) to calculate the optimal listing price on Mercado Libre, considering commissions, costs, and profit margins to maximize profitability.",
+          "demo": "https://dobre.nanilabs.lat",
+          "featured": false,
+          "order": 4
+        },
+        {
+          "slug": "doublelink",
+          "name": "DoubleLink",
+          "description": "Cross-platform application for Android and Windows that allows controlling and communicating devices via a direct local network connection. Includes PC remote control, file transfer, shared clipboard, multimedia, notifications, and camera and screen streaming.",
+          "technologies": ["Flutter", "Dart", "WebSocket", "Android", "Windows"],
+          "demo": "https://doublelink.nanilabs.lat",
+          "featured": false,
+          "order": 5
         }
       ]
     },
-    "certificates": {
-      "eyebrow": "Certificates",
-      "title": "Certifications",
-      "description": "Certifications and verifiable credentials will be added here in the future.",
-      "items": []
-    },
     "participations": {
       "eyebrow": "Participations",
-      "title": "Events and competitions",
-      "description": "Places where I have taken part by building and presenting projects.",
+      "title": "Events & Competitions",
+      "description": "Selected participations in software events and hackathons.",
       "items": [
         {
-          "name": "OpenAI Build Week 2026",
-          "description": "An international competition organized by OpenAI where I built and submitted DoBre, using AI tools as support during development. Project published on Devpost.",
+          "name": "Hackathon organized by OpenAI — 2026",
+          "description": "Participated with the DoBre project, a cross-platform solution for intelligent pricing optimization on Mercado Libre.",
           "year": "2026",
-          "result": "Project submitted."
+          "result": "Participating project"
         }
       ]
     },
     "experience": {
       "eyebrow": "Experience",
-      "title": "Technical work and hands-on experience",
-      "description": "Real work experiences that complement my studies and personal projects.",
+      "title": "Work Experience",
+      "description": "Hands-on experience and independent technical IT support work.",
       "items": [
         {
           "title": "IT Technical Support",
           "subtitle": "Independent",
           "period": "2021 - Present",
-          "description": "Independent IT support work focused on troubleshooting, repair, and maintenance.",
+          "description": "Independent IT technical support for hardware and software maintenance and troubleshooting.",
           "achievements": [
-            "Computer diagnostics and repair.",
+            "PC diagnostics and repair.",
             "Windows installation and configuration.",
             "Hardware and software troubleshooting.",
-            "Preventive and corrective maintenance."
-          ]
-        },
-        {
-          "title": "Motorcycle delivery work",
-          "subtitle": "Independent work",
-          "period": "2022",
-          "description": "Field work experience centered on organization, reliability, and customer service.",
-          "achievements": [
-            "Order delivery.",
-            "Customer service.",
-            "Route organization."
+            "Preventive and corrective maintenance.",
+            "PC assembly and upgrades."
           ]
         }
       ]
     },
     "education": {
       "eyebrow": "Education",
-      "title": "Academic background",
-      "description": "Current university studies and completed secondary education.",
+      "title": "Academic Background",
+      "description": "University education and completed secondary education.",
       "items": [
         {
           "title": "Bachelor's Degree in Information Systems",
           "subtitle": "Universidad Autónoma de Entre Ríos (UADER)",
           "period": "2024 - Present",
-          "description": "Ongoing university degree focused on information systems and applied technical training.",
-          "achievements": [
-            "Training in systems analysis and software development.",
-            "Continuous learning in programming and problem solving.",
-            "Personal projects built as a practical extension of formal study."
-          ]
+          "description": "Undergraduate university degree in progress focusing on systems analysis, software development, and architecture.",
+          "achievements": []
         },
         {
           "title": "Systems Analyst Degree",
           "subtitle": "Universidad Autónoma de Entre Ríos (UADER)",
           "period": "2024 - Present",
-          "description": "Parallel academic path focused on conceptual and technical foundations for systems development.",
-          "achievements": [
-            "Study of software-related tools and methodologies.",
-            "Technical judgment developed through both formal learning and practice.",
-            "Ongoing focus on expanding skills applicable to real projects."
-          ]
+          "description": "Intermediate university degree in progress with strong technical foundations in software development.",
+          "achievements": []
         },
         {
           "title": "Completed Secondary Education",
           "subtitle": "Escuela Normal Superior en Lenguas Vivas Ernesto A. Bavio",
           "period": "Graduated 2024",
-          "description": "Completed secondary education.",
-          "achievements": [
-            "Secondary school diploma completed."
-          ]
+          "description": "High school diploma completed.",
+          "achievements": []
         }
       ]
     },
+    "certificates": {
+      "eyebrow": "Certificates",
+      "title": "Certifications",
+      "description": "Certifications and verifiable credentials will be added here soon.",
+      "items": []
+    },
     "contact": {
       "title": "Contact",
-      "description": "You can reach out by email or visit my professional profiles to learn more about my work and projects.",
+      "description": "You can send me a message through the form below or reach out directly to my email address.",
       "email": "meonizignacioexequiel@gmail.com",
+      "phone": "3444 463754",
+      "directEmailPrompt": "You can also contact me directly by email:",
       "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
       "github": "https://github.com/NaniLabs",
       "submitLabel": "Send message",
+      "submittingLabel": "Sending message...",
+      "successTitle": "Message sent successfully!",
+      "successMessage": "Thank you for reaching out. I have received your message and will get back to you as soon as possible.",
+      "sendAnother": "Send another message",
       "fields": {
         "name": "Name",
         "email": "Email",
         "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "you@email.com",
+        "message": "Write your message here (at least 10 characters)..."
+      },
+      "validation": {
+        "nameRequired": "Please enter your name (at least 2 characters).",
+        "emailRequired": "Please enter a valid email address.",
+        "messageRequired": "The message must be at least 10 characters long.",
+        "genericError": "An error occurred while sending the message. Please try again or email me directly."
       }
     }
   },
   "footer": {
-    "message": "Portfolio built with React, TypeScript, Vite and Tailwind CSS.",
+    "message": "Personal portfolio built with React, TypeScript, and Tailwind CSS.",
     "copyright": "Ignacio Exequiel Meoniz. All rights reserved."
   },
   "notFound": {
     "title": "Page not found",
-    "description": "The page you tried to open does not exist or has been moved. You can return to the homepage and keep exploring the portfolio.",
+    "description": "The page you are looking for does not exist or has been moved. You can return to the homepage.",
     "action": "Back to home"
   }
 }

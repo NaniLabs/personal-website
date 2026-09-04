@@ -36,11 +36,13 @@ export interface CategoryItem {
 export interface ProjectItem {
   slug: string
   name: string
-  description: string
-  year: string
-  status: string
+  description?: string
+  tag?: string
+  badge?: string
+  year?: string
+  status?: string
   image?: string
-  technologies: string[]
+  technologies?: string[]
   demo?: string
   github?: string
   video?: string
@@ -79,13 +81,30 @@ export interface ContactContent {
   title: string
   description: string
   email: string
+  phone?: string
+  directEmailPrompt?: string
   linkedin: string
   github: string
   submitLabel: string
+  submittingLabel?: string
+  successTitle?: string
+  successMessage?: string
+  sendAnother?: string
   fields: {
     name: string
     email: string
     message: string
+  }
+  placeholders?: {
+    name?: string
+    email?: string
+    message?: string
+  }
+  validation?: {
+    nameRequired?: string
+    emailRequired?: string
+    messageRequired?: string
+    genericError?: string
   }
 }
 
@@ -150,6 +169,10 @@ export interface SiteContent {
   defaultLocale: Locale
   storageKey: string
   email: string
+  phone?: string
+  location?: string
+  profileImage?: string
+  cvPath?: string
   social: {
     github: string
     linkedin: string

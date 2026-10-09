@@ -72,7 +72,7 @@
           "external": true
         },
         {
-          "label": "Visit Nani Labs",
+          "label": "Visit NaniLabs",
           "url": "https://nanilabs.lat",
           "variant": "secondary",
           "external": true
@@ -205,6 +205,16 @@
           "demo": "https://doublelink.nanilabs.lat",
           "featured": false,
           "order": 5
+        },
+        {
+          "slug": "nanilabs-saas",
+          "name": "NaniLabs SaaS",
+          "description": "Modular web platform for retail and technical service businesses centralizing inventory, sales, work orders, Mercado Pago integrated payments, and billing.",
+          "image": "/images/projects/aquamarine.png",
+          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Mercado Pago"],
+          "demo": "https://saas.nanilabs.lat",
+          "featured": true,
+          "order": 6
         }
       ]
     },

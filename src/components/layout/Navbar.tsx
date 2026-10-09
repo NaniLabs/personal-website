@@ -32,7 +32,7 @@ export function Navbar({ portfolio }: NavbarProps) {
             {portfolio.site.siteName}
           </a>
           <span className="hidden px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--color-accent)] border rounded-full sm:inline-flex" style={{ borderColor: 'var(--color-accent)' }}>
-            Nani Labs
+            NaniLabs
           </span>
         </div>
 

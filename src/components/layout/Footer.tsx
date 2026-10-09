@@ -12,7 +12,7 @@ export function Footer({ portfolio }: FooterProps) {
         <p className="footer-text">{portfolio.content.footer.copyright}</p>
         <p className="flex items-center gap-2 text-[var(--color-accent)]">
           <span aria-hidden="true">·</span>
-          Fundador de Nani Labs
+          Fundador de NaniLabs
         </p>
       </div>
     </footer>

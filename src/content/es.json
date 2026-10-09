@@ -72,7 +72,7 @@
           "external": true
         },
         {
-          "label": "Visitar Nani Labs",
+          "label": "Visitar NaniLabs",
           "url": "https://nanilabs.lat",
           "variant": "secondary",
           "external": true
@@ -205,6 +205,16 @@
           "demo": "https://doublelink.nanilabs.lat",
           "featured": false,
           "order": 5
+        },
+        {
+          "slug": "nanilabs-saas",
+          "name": "NaniLabs SaaS",
+          "description": "Plataforma web modular para comercios y servicios técnicos que centraliza inventario, ventas, órdenes de trabajo, pagos integrados con Mercado Pago y facturación.",
+          "image": "/images/projects/aquamarine.png",
+          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Mercado Pago"],
+          "demo": "https://saas.nanilabs.lat",
+          "featured": true,
+          "order": 6
         }
       ]
     },

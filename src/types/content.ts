@@ -137,6 +137,7 @@ export interface LocaleContent {
     featured: string
     highlightedAction: string
     comingSoon: string
+    visit: string
     contactByEmail: string
     formNote: string
     noItemsYet: string
@@ -166,6 +167,7 @@ export interface LocaleContent {
 export interface SiteContent {
   siteName: string
   siteUrl: string
+  nanilabsUrl?: string
   defaultLocale: Locale
   storageKey: string
   email: string
@@ -176,6 +178,7 @@ export interface SiteContent {
   social: {
     github: string
     linkedin: string
+    nanilabs?: string
   }
 }
 

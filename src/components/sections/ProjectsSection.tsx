@@ -147,7 +147,7 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
                 {project.image ? (
                   <img
                     src={project.image}
-                    alt=""
+                    alt={project.name}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
@@ -215,7 +215,7 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
                       className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
                     >
                       <ArrowUpRight className="h-3.5 w-3.5" />
-                      Demo
+                      {portfolio.content.labels.visit}
                     </a>
                   ) : null}
                   {project.github ? (

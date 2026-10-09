@@ -164,6 +164,7 @@ Los proyectos se encuentran en la sección `"projects"` dentro de `src/content/e
   "year": "2026",
   "status": "Finalizado",
   "description": "Descripción clara del proyecto.",
+  "image": "/images/projects/mi-proyecto.png",
   "technologies": ["Tecnología 1", "Tecnología 2"],
   "demo": "https://demo.url.com",
   "github": "https://github.com/usuario/repo",
@@ -176,16 +177,37 @@ Los proyectos se encuentran en la sección `"projects"` dentro de `src/content/e
 
 > **Regla de equivalencia:** Para que todos los proyectos se muestren de forma equivalente en la grilla sin que ninguno tome protagonismo forzado, dejá `"featured": false` en todos ellos.
 
+### Imágenes de los Proyectos:
+- **Ubicación:** Todas las imágenes residen en `public/images/projects/`.
+- **Origen de imágenes actuales:** Las imágenes de **Aquamarine** (`aquamarine.png`), **DoBre** (`dobre.png`), **DoubleLink** (`doublelink.png`) y **OrganEyes** (`organeyes.png`) fueron copiadas desde el proyecto de recursos `NaniLabs_Page` sin alterar en absoluto dicho proyecto original.
+- **Proyectos sin imagen:** Aquellos proyectos que no cuenten con una imagen oficial (como **FreeSoft**) omiten la propiedad `"image"` y el componente renderiza automáticamente un contenedor visual elegante con ícono de código y el nombre del proyecto, sin deformar la grilla.
+- **Relación de aspecto:** Las imágenes se presentan con proporción `aspect-video` (16:9) y `object-cover` para evitar cualquier tipo de distorsión visual o desalineación entre tarjetas en desktop y móvil.
+
+### Botón de Acceso al Proyecto ("Visitar" / "Visit"):
+- Cualquier proyecto que posea la propiedad `"demo"` muestra en su tarjeta el botón de acceso directo.
+- La etiqueta visible está configurada en JSON:
+  - En español (`es.json`): `"visit": "Visitar"`
+  - En inglés (`en.json`): `"visit": "Visit"`
+- El componente `ProjectsSection.tsx` consume dinámicamente `portfolio.content.labels.visit`.
+
 ### Cómo agregar un proyecto:
 1. Abrí `src/content/es.json`.
 2. Buscá `"sections" > "projects" > "items"`.
-3. Agregá un nuevo objeto al array con los datos en español. Si no tiene descripción (como ocurrió con FreeSoft) o no tiene demo, dejalo vacío `""` o simplemente no incluyas la clave.
-4. Abrí `src/content/en.json` y agregá exactamente el mismo objeto con los textos en inglés.
-5. Si querés asignarle una imagen, colocala en `public/images/projects/nombre-imagen.jpg` y añadí `"image": "/images/projects/nombre-imagen.jpg"`. Si no le pones imagen, el sistema muestra automáticamente un ícono de código estilizado.
+3. Agregá un nuevo objeto al array con los datos en español.
+4. Si tiene imagen, colocala en `public/images/projects/nombre-imagen.png` y agregá `"image": "/images/projects/nombre-imagen.png"`.
+5. Abrí `src/content/en.json` y agregá exactamente el mismo objeto con los textos en inglés.
+
+### Cómo cambiar o asociar una imagen a un proyecto:
+1. Guardá el archivo de imagen dentro de `public/images/projects/` (se recomienda formato `.png` o `.jpg` en proporción aproximada 16:9).
+2. En `src/content/es.json` y `src/content/en.json`, agregá o modificá el campo `"image"` del proyecto:
+   ```json
+   "image": "/images/projects/nueva-imagen.png"
+   ```
+3. El cambio se reflejará de inmediato sin alterar ningún componente React.
 
 ### Cómo modificar un proyecto:
 1. Localizá el proyecto por su `"slug"` o `"name"` en `src/content/es.json`.
-2. Editá los campos deseados (descripción, tecnologías, URLs).
+2. Editá los campos deseados (descripción, tecnologías, URLs, imagen).
 3. Hacé lo mismo en `src/content/en.json`.
 
 ### Cómo eliminar un proyecto:
@@ -195,14 +217,46 @@ Los proyectos se encuentran en la sección `"projects"` dentro de `src/content/e
 
 ---
 
-## 6. Cómo Cambiar Nombre, Email, Teléfono y Redes Sociales
+## 6. Acceso a Nani Labs y Datos de Contacto Global
 
+### Nani Labs como Marca (NO como proyecto)
+Nani Labs es tu marca/empresa, no un proyecto individual de la grilla. Por lo tanto:
+- **No aparece en la grilla de proyectos.**
+- **Aparece en la tarjeta superior (Hero):** Como un botón de acción profesional con el texto `"Visitar Nani Labs"` (en inglés `"Visit Nani Labs"`), enlazando a `https://nanilabs.lat`.
+
+### Dónde está configurado el enlace a Nani Labs:
+1. **Configuración global:** En `src/content/site.json` bajo `"nanilabsUrl": "https://nanilabs.lat"`.
+2. **Botón en el Hero (Español):** En `src/content/es.json` bajo `sections.hero.actions`:
+   ```json
+   {
+     "label": "Visitar Nani Labs",
+     "url": "https://nanilabs.lat",
+     "variant": "secondary",
+     "external": true
+   }
+   ```
+3. **Botón en el Hero (Inglés):** En `src/content/en.json` bajo `sections.hero.actions`:
+   ```json
+   {
+     "label": "Visit Nani Labs",
+     "url": "https://nanilabs.lat",
+     "variant": "secondary",
+     "external": true
+   }
+   ```
+
+### Cómo cambiar el enlace o texto de Nani Labs en el futuro:
+- Para cambiar la URL: Modificá `"url"` en las acciones del Hero en `es.json`, `en.json` y en `site.json` (`nanilabsUrl`).
+- Para cambiar el texto: Modificá `"label"` en las acciones del Hero en `es.json` y `en.json`.
+
+### Datos de Identidad Personal:
 Todos los datos de identidad global se modifican en un único lugar: **`src/content/site.json`**.
 
 ```json
 {
   "siteName": "Ignacio Exequiel Meoniz",
   "siteUrl": "https://ceo.nanilabs.lat",
+  "nanilabsUrl": "https://nanilabs.lat",
   "defaultLocale": "es",
   "storageKey": "cvpage-locale",
   "email": "meonizignacioexequiel@gmail.com",
@@ -212,7 +266,8 @@ Todos los datos de identidad global se modifican en un único lugar: **`src/cont
   "cvPath": "/documents/ignacio-exequiel-meoniz-cv.pdf",
   "social": {
     "github": "https://github.com/NaniLabs",
-    "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415"
+    "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
+    "nanilabs": "https://nanilabs.lat"
   }
 }
 ```
@@ -482,6 +537,15 @@ Usá esta guía rápida cada vez que vayas a realizar una actualización:
 ### [ ] Modificar un proyecto existente
 1. Buscar el proyecto por su `slug` en `src/content/es.json` y actualizar la información.
 2. Actualizar los mismos campos en `src/content/en.json`.
+
+### [ ] Cambiar o asociar imagen a un proyecto
+1. Colocar el archivo en `public/images/projects/nombre-imagen.png`.
+2. En `src/content/es.json` y `src/content/en.json`, asignar `"image": "/images/projects/nombre-imagen.png"` al proyecto.
+3. Ejecutar `npm run build` para comprobar.
+
+### [ ] Cambiar enlace a Nani Labs
+1. En `src/content/site.json`, editar `"nanilabsUrl"`.
+2. En `src/content/es.json` y `src/content/en.json`, editar la acción con `"Visitar Nani Labs"` / `"Visit Nani Labs"` dentro de `sections.hero.actions`.
 
 ### [ ] Cambiar redes sociales
 1. Abrir `src/content/site.json` y editar las URLs bajo `"social"`.

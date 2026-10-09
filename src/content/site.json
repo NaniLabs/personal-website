@@ -1,6 +1,7 @@
 {
   "siteName": "Ignacio Exequiel Meoniz",
   "siteUrl": "https://ceo.nanilabs.lat",
+  "nanilabsUrl": "https://nanilabs.lat",
   "defaultLocale": "es",
   "storageKey": "cvpage-locale",
   "email": "meonizignacioexequiel@gmail.com",
@@ -10,6 +11,7 @@
   "cvPath": "/documents/ignacio-exequiel-meoniz-cv.pdf",
   "social": {
     "github": "https://github.com/NaniLabs",
-    "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415"
+    "linkedin": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
+    "nanilabs": "https://nanilabs.lat"
   }
 }

@@ -39,6 +39,7 @@
     "featured": "Featured",
     "highlightedAction": "Open",
     "comingSoon": "Coming soon",
+    "visit": "Visit",
     "contactByEmail": "Send email",
     "formNote": "Protected message sent directly to my inbox.",
     "noItemsYet": "There are no items in this section yet."
@@ -67,6 +68,12 @@
         {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
+          "variant": "secondary",
+          "external": true
+        },
+        {
+          "label": "Visit Nani Labs",
+          "url": "https://nanilabs.lat",
           "variant": "secondary",
           "external": true
         },
@@ -165,6 +172,7 @@
           "slug": "aquamarine",
           "name": "Aquamarine",
           "description": "Inventory, sales, and repair management system for a technical service shop.",
+          "image": "/images/projects/aquamarine.png",
           "technologies": ["C++", "Qt", "SQLite"],
           "featured": false,
           "order": 2
@@ -173,6 +181,7 @@
           "slug": "organeyes",
           "name": "OrganEyes",
           "description": "Windows application that automatically organizes files according to extensions and file types.",
+          "image": "/images/projects/organeyes.png",
           "technologies": ["C++", "Qt"],
           "featured": false,
           "order": 3
@@ -182,6 +191,7 @@
           "name": "DoBre",
           "tag": "Participating project in a hackathon organized by OpenAI — 2026",
           "description": "Cross-platform platform (Windows, Android, and Web) to calculate the optimal listing price on Mercado Libre, considering commissions, costs, and profit margins to maximize profitability.",
+          "image": "/images/projects/dobre.png",
           "demo": "https://dobre.nanilabs.lat",
           "featured": false,
           "order": 4
@@ -190,6 +200,7 @@
           "slug": "doublelink",
           "name": "DoubleLink",
           "description": "Cross-platform application for Android and Windows that allows controlling and communicating devices via a direct local network connection. Includes PC remote control, file transfer, shared clipboard, multimedia, notifications, and camera and screen streaming.",
+          "image": "/images/projects/doublelink.png",
           "technologies": ["Flutter", "Dart", "WebSocket", "Android", "Windows"],
           "demo": "https://doublelink.nanilabs.lat",
           "featured": false,

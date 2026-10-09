@@ -39,6 +39,7 @@
     "featured": "Destacado",
     "highlightedAction": "Abrir",
     "comingSoon": "Próximamente",
+    "visit": "Visitar",
     "contactByEmail": "Enviar email",
     "formNote": "Mensaje protegido y enviado directamente a mi casilla.",
     "noItemsYet": "Todavía no hay elementos cargados en esta sección."
@@ -67,6 +68,12 @@
         {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
+          "variant": "secondary",
+          "external": true
+        },
+        {
+          "label": "Visitar Nani Labs",
+          "url": "https://nanilabs.lat",
           "variant": "secondary",
           "external": true
         },
@@ -165,6 +172,7 @@
           "slug": "aquamarine",
           "name": "Aquamarine",
           "description": "Sistema de gestión de inventario, ventas y reparaciones para local de servicio técnico.",
+          "image": "/images/projects/aquamarine.png",
           "technologies": ["C++", "Qt", "SQLite"],
           "featured": false,
           "order": 2
@@ -173,6 +181,7 @@
           "slug": "organeyes",
           "name": "OrganEyes",
           "description": "Aplicación para Windows que organiza archivos automáticamente según extensiones y tipos de archivo.",
+          "image": "/images/projects/organeyes.png",
           "technologies": ["C++", "Qt"],
           "featured": false,
           "order": 3
@@ -182,6 +191,7 @@
           "name": "DoBre",
           "tag": "Proyecto participante de un hackatón organizado por OpenAI — 2026",
           "description": "Plataforma multiplataforma (Windows, Android y Web) para calcular el precio óptimo de publicación en Mercado Libre, considerando comisiones, costos y márgenes de ganancia para maximizar la rentabilidad.",
+          "image": "/images/projects/dobre.png",
           "demo": "https://dobre.nanilabs.lat",
           "featured": false,
           "order": 4
@@ -190,6 +200,7 @@
           "slug": "doublelink",
           "name": "DoubleLink",
           "description": "Aplicación multiplataforma para Android y Windows que permite controlar y comunicar dispositivos mediante una conexión directa por red local. Incluye control remoto del PC, transferencia de archivos, portapapeles compartido, multimedia, notificaciones y streaming de cámara y pantalla.",
+          "image": "/images/projects/doublelink.png",
           "technologies": ["Flutter", "Dart", "WebSocket", "Android", "Windows"],
           "demo": "https://doublelink.nanilabs.lat",
           "featured": false,

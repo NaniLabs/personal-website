@@ -16,28 +16,32 @@ export function CertificatesSection({ portfolio }: CertificatesSectionProps) {
       <SectionHeader eyebrow={section.eyebrow} title={section.title} description={section.description} />
       <div className="mt-8">
         {section.items.length > 0 ? (
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="divide-y divide-[var(--color-border)]/60">
             {section.items.map((item) => (
-              <article key={`${item.name}-${item.date}`} className="panel overflow-hidden" style={{ borderColor: 'var(--color-border)' }}>
-                {item.image ? <img src={item.image} alt={item.name} loading="lazy" className="h-48 w-full object-cover" /> : null}
-                <div className="p-6">
-                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-text-subtle)]">{item.date}</p>
-                  <h3 className="mt-2 font-display text-xl text-[var(--color-text)]">{item.name}</h3>
-                  <p className="mt-1 text-sm text-[var(--color-text-muted)]">{item.organization}</p>
-                  <div className="mt-5 flex flex-wrap gap-4 text-sm text-[var(--color-text-muted)]">
-                    {item.pdf ? (
-                      <a href={item.pdf} className="inline-flex items-center gap-2 transition-colors hover:text-[var(--color-text)]">
-                        <FileBadge2 className="h-4 w-4" />
-                        PDF
-                      </a>
-                    ) : null}
-                    {item.link ? (
-                      <a href={item.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-[var(--color-text)]">
-                        <ExternalLink className="h-4 w-4" />
-                        Ver credencial
-                      </a>
-                    ) : null}
+              <article key={`${item.name}-${item.date}`} className="py-6 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  {item.image ? (
+                    <img src={item.image} alt={item.name} loading="lazy" className="h-14 w-14 rounded-lg object-cover border border-[var(--color-border)] shrink-0" />
+                  ) : null}
+                  <div>
+                    <span className="font-mono text-xs text-[var(--color-text-subtle)]">{item.date}</span>
+                    <h3 className="font-display text-lg font-semibold text-[var(--color-text)]">{item.name}</h3>
+                    <p className="text-sm text-[var(--color-text-muted)]">{item.organization}</p>
                   </div>
+                </div>
+                <div className="flex items-center gap-3 self-start sm:self-auto shrink-0 font-mono text-xs">
+                  {item.pdf ? (
+                    <a href={item.pdf} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
+                      <FileBadge2 className="h-3.5 w-3.5" />
+                      PDF
+                    </a>
+                  ) : null}
+                  {item.link ? (
+                    <a href={item.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 transition-colors">
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      Ver credencial
+                    </a>
+                  ) : null}
                 </div>
               </article>
             ))}

@@ -140,121 +140,103 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
       )}
 
       {rest.length > 0 && (
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.map((project) => (
-            <article key={project.slug} className="panel overflow-hidden flex flex-col" style={{ borderColor: 'var(--color-border)' }}>
-              <div className="relative aspect-video overflow-hidden bg-[var(--color-bg-elevated)]">
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                ) : (
-                  <div className="card-image-fallback">
-                    <div className="card-image-fallback-content flex flex-col items-center justify-center p-6 text-center">
-                      <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl border bg-[var(--color-bg-card)] text-[var(--color-accent)]" style={{ borderColor: 'var(--color-border)' }}>
-                        <Code2 className="h-5 w-5" aria-hidden="true" />
-                      </div>
-                      <span className="font-display text-sm font-medium text-[var(--color-text-muted)]">{project.name}</span>
-                    </div>
-                  </div>
-                )}
-              </div>
+        <div className="mt-12 pt-8 border-t border-[var(--color-border)]/60">
+          <div className="mb-6 flex items-center justify-between">
+            <h4 className="font-display text-lg font-semibold text-[var(--color-text)]">
+              Otros proyectos y herramientas
+            </h4>
+            <span className="font-mono text-xs text-[var(--color-text-subtle)]">
+              {rest.length} desarrollos
+            </span>
+          </div>
 
-              <div className="p-6 sm:p-7 flex flex-col flex-1">
-                {(project.tag || project.badge || project.year || project.status) ? (
-                  <div className="flex flex-wrap items-center gap-2">
-                    {project.tag ? (
+          <div className="divide-y divide-[var(--color-border)]/60">
+            {rest.map((project) => (
+              <article key={project.slug} className="py-6 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-start justify-between gap-6">
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    {project.tag && (
                       <span className="badge badge-accent text-xs">
                         {project.tag}
                       </span>
-                    ) : null}
-                    {project.badge ? (
-                      <span className="badge badge-featured text-xs">
-                        {project.badge}
-                      </span>
-                    ) : null}
-                    {project.year ? (
-                      <span className="badge badge-muted">
+                    )}
+                    {project.year && (
+                      <span className="badge badge-muted text-xs">
                         {project.year}
                       </span>
-                    ) : null}
-                    {project.status ? (
-                      <span className="badge badge-accent">
+                    )}
+                    {project.status && (
+                      <span className="badge badge-accent text-xs">
                         {project.status}
                       </span>
-                    ) : null}
+                    )}
                   </div>
-                ) : null}
 
-                <h3 className="mt-4 font-display text-xl text-[var(--color-text)] sm:text-2xl">{project.name}</h3>
-                {project.description ? (
-                  <p className="mt-3 text-sm leading-7 text-[var(--color-text-muted)] flex-1">{project.description}</p>
-                ) : (
-                  <div className="flex-1" />
-                )}
+                  <h3 className="font-display text-xl font-bold text-[var(--color-text)]">{project.name}</h3>
+                  {project.description && (
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)] max-w-2xl">{project.description}</p>
+                  )}
 
-                {project.technologies && project.technologies.length > 0 ? (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span key={tech} className="project-tech-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
+                  {project.technologies && project.technologies.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {project.technologies.map((tech) => (
+                        <span key={tech} className="project-tech-tag text-xs font-mono">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.demo ? (
+                <div className="flex flex-wrap items-center gap-3 self-start md:self-center shrink-0 font-mono text-xs">
+                  {project.demo && (
                     <a
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 transition-colors"
                     >
                       <ArrowUpRight className="h-3.5 w-3.5" />
                       {portfolio.content.labels.visit}
                     </a>
-                  ) : null}
-                  {project.github ? (
+                  )}
+                  {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                     >
                       <Link2 className="h-3.5 w-3.5" />
                       GitHub
                     </a>
-                  ) : null}
-                  {project.documentation ? (
+                  )}
+                  {project.documentation && (
                     <a
                       href={project.documentation}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Docs
                     </a>
-                  ) : null}
-                  {project.video ? (
+                  )}
+                  {project.video && (
                     <a
                       href={project.video}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                     >
                       <PlayCircle className="h-3.5 w-3.5" />
                       Video
                     </a>
-                  ) : null}
+                  )}
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       )}
     </section>

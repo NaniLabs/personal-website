@@ -69,17 +69,6 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
                     external
                   />
                 ) : null}
-                {featured.demo ? (
-                  <a
-                    href={featured.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-icon"
-                  >
-                    <ArrowUpRight className="h-4 w-4" />
-                    {portfolio.content.labels.highlightedAction}
-                  </a>
-                ) : null}
                 {featured.github ? (
                   <a
                     href={featured.github}
@@ -195,7 +184,7 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                     >
                       <ArrowUpRight className="h-3.5 w-3.5" />
                       {portfolio.content.labels.visit}

@@ -16,8 +16,6 @@
 
   --color-accent: #22d3ee;
   --color-accent-dim: #06b6d4;
-  --color-accent-violet: #a855f7;
-  --color-accent-gradient: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
 
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
   --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.45);
@@ -48,11 +46,26 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 5rem;
+}
+
+main section {
+  scroll-snap-align: start;
+}
+
+main section:nth-of-type(odd) {
+  background-color: #09090b;
+}
+
+main section:nth-of-type(even) {
+  background-color: #12151b;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+    scroll-snap-type: none;
   }
 
   *,
@@ -69,10 +82,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(34, 211, 238, 0.06), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(168, 85, 247, 0.04), transparent 50%),
-    var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;

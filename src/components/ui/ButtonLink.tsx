@@ -13,9 +13,9 @@ interface ButtonLinkProps {
 
 const variants = {
   primary:
-    'bg-[var(--color-accent-gradient)] text-[var(--color-bg)] shadow-[var(--shadow-glow)] hover:shadow-[0_0_40px_rgba(34,211,238,0.25)]',
-  secondary: 'border bg-[var(--color-bg-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)]',
-  ghost: 'text-[var(--color-text-muted)] hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-text)]',
+    'bg-[#f8fafc] text-[#09090b] font-semibold hover:bg-[#e2e8f0] transition-colors',
+  secondary: 'border border-[var(--color-border)] bg-[var(--color-bg-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)] transition-colors',
+  ghost: 'text-[var(--color-text-muted)] hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-text)] transition-colors',
 }
 
 export function ButtonLink({

@@ -13,11 +13,11 @@ export function HeroSection({ portfolio }: HeroSectionProps) {
   const hasPhoto = Boolean(photoSrc)
 
   return (
-    <section className="section-shell animate-enter pt-16 pb-12 sm:pt-24 sm:pb-18">
-      <div className="panel overflow-hidden" style={{ borderColor: 'var(--color-border)' }}>
-        <div className="grid gap-10 px-6 py-8 sm:px-10 sm:py-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:px-14">
+    <section className="w-full border-b border-[var(--color-border)]">
+      <div className="section-shell animate-enter pt-16 pb-12 sm:pt-24 sm:pb-18">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border bg-[var(--color-accent)]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]" style={{ borderColor: 'var(--color-accent)' }}>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
               <Sparkles className="h-3.5 w-3.5" />
               {hero.availability}
             </div>
@@ -57,7 +57,6 @@ export function HeroSection({ portfolio }: HeroSectionProps) {
               />
             ) : (
               <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-2xl border bg-[var(--color-bg-elevated)] flex items-center justify-center" style={{ borderColor: 'var(--color-border)' }}>
-                <div className="absolute inset-0 bg-[var(--color-accent-gradient)] opacity-5" />
                 <div className="relative flex flex-col items-center justify-center gap-3 text-center p-8">
                   <div className="h-20 w-20 rounded-full border flex items-center justify-center" style={{ borderColor: 'var(--color-border)' }}>
                     <span className="font-display text-3xl font-bold text-[var(--color-text-muted)]" aria-hidden="true">

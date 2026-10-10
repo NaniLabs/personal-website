@@ -15,7 +15,7 @@ export function NotFoundPage({ portfolio }: NotFoundPageProps) {
         <p className="mt-4 text-lg leading-8 text-[var(--color-text-muted)]">{portfolio.content.notFound.description}</p>
         <Link
           to="/"
-          className="mt-8 inline-flex rounded-full bg-[var(--color-accent-gradient)] px-5 py-3 text-sm font-semibold text-[var(--color-bg)] shadow-[var(--shadow-glow)] hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] transition-all duration-300 focus-ring"
+          className="mt-8 inline-flex rounded-full bg-[#f8fafc] px-5 py-3 text-sm font-semibold text-[#09090b] hover:bg-[#e2e8f0] transition-colors focus-ring"
         >
           {portfolio.content.notFound.action}
         </Link>

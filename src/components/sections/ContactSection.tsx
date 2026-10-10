@@ -93,8 +93,9 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
   }
 
   return (
-    <section id={sectionIds.contact} className="section-shell py-12 sm:py-16">
-      <div className="panel overflow-hidden" style={{ borderColor: 'var(--color-border)' }}>
+    <section id={sectionIds.contact} className="w-full">
+      <div className="section-shell py-12 sm:py-16">
+        <div className="panel overflow-hidden" style={{ borderColor: 'var(--color-border)' }}>
         <div className="grid gap-0 lg:grid-cols-[0.8fr_1.2fr]">
           {/* Information sidebar */}
           <div className="border-b bg-[var(--color-bg-elevated)] p-6 sm:p-8 lg:border-r lg:border-b-0" style={{ borderColor: 'var(--color-border)' }}>
@@ -319,6 +320,7 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
             )}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

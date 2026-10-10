@@ -16,8 +16,9 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
   const rest = items.filter((p) => !p.featured)
 
   return (
-    <section id={sectionIds.projects} className="section-shell py-12 sm:py-16">
-      <SectionHeader eyebrow={section.eyebrow} title={section.title} description={section.description} />
+    <section id={sectionIds.projects} className="w-full border-b border-[var(--color-border)]">
+      <div className="section-shell py-12 sm:py-16">
+        <SectionHeader eyebrow={section.eyebrow} title={section.title} description={section.description} />
 
       {featured && (
         <article className="mt-8 panel overflow-hidden" style={{ borderColor: 'var(--color-border)' }}>
@@ -239,6 +240,7 @@ export function ProjectsSection({ portfolio }: ProjectsSectionProps) {
           </div>
         </div>
       )}
+      </div>
     </section>
   )
 }

@@ -15,7 +15,7 @@ interface HomePageProps {
 
 export function HomePage({ portfolio }: HomePageProps) {
   return (
-    <main>
+    <>
       <HeroSection portfolio={portfolio} />
       <AboutSection portfolio={portfolio} />
       <TechnologiesSection portfolio={portfolio} />
@@ -25,6 +25,6 @@ export function HomePage({ portfolio }: HomePageProps) {
       <TimelineSection id={sectionIds.education} section={portfolio.content.sections.education} />
       <CertificatesSection portfolio={portfolio} />
       <ContactSection portfolio={portfolio} />
-    </main>
+    </>
   )
 }

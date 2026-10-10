@@ -162,7 +162,7 @@
         {
           "slug": "freesoft",
           "name": "FreeSoft",
-          "description": "",
+          "description": "Proyecto de software libre que ofrece alternativas gratuitas y de código abierto a herramientas comerciales de uso cotidiano. Código disponible en GitHub.",
           "technologies": [],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
@@ -199,7 +199,7 @@
         {
           "slug": "doublelink",
           "name": "DoubleLink",
-          "description": "Aplicación multiplataforma para Android y Windows que permite controlar y comunicar dispositivos mediante una conexión directa por red local. Incluye control remoto del PC, transferencia de archivos, portapapeles compartido, multimedia, notificaciones y streaming de cámara y pantalla.",
+          "description": "Aplicación multiplataforma para Android y Windows que permite controlar y comunicar dispositivos mediante una conexión directa por red local. Incluye control remoto del PC, transferencia de archivos, portapapeles compartido, multimedia y notificaciones.",
           "image": "/images/projects/doublelink.png",
           "technologies": ["Flutter", "Dart", "WebSocket", "Android", "Windows"],
           "demo": "https://doublelink.nanilabs.lat",
@@ -213,6 +213,7 @@
           "image": "/images/projects/aquamarine.png",
           "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Mercado Pago"],
           "demo": "https://saas.nanilabs.lat",
+          "featuredButtonLabel": "Visitar plataforma",
           "featured": true,
           "order": 6
         }

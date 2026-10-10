@@ -162,7 +162,7 @@
         {
           "slug": "freesoft",
           "name": "FreeSoft",
-          "description": "",
+          "description": "Free and open-source software project providing free alternatives to commonly used commercial tools. Source code available on GitHub.",
           "technologies": [],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
@@ -199,7 +199,7 @@
         {
           "slug": "doublelink",
           "name": "DoubleLink",
-          "description": "Cross-platform application for Android and Windows that allows controlling and communicating devices via a direct local network connection. Includes PC remote control, file transfer, shared clipboard, multimedia, notifications, and camera and screen streaming.",
+          "description": "Cross-platform application for Android and Windows that allows controlling and communicating devices via a direct local network connection. Includes PC remote control, file transfer, shared clipboard, multimedia, and notifications.",
           "image": "/images/projects/doublelink.png",
           "technologies": ["Flutter", "Dart", "WebSocket", "Android", "Windows"],
           "demo": "https://doublelink.nanilabs.lat",
@@ -213,6 +213,7 @@
           "image": "/images/projects/aquamarine.png",
           "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Mercado Pago"],
           "demo": "https://saas.nanilabs.lat",
+          "featuredButtonLabel": "Visit platform",
           "featured": true,
           "order": 6
         }

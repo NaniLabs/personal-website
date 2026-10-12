@@ -1,9 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#09090b"/>
-  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#27272a" stroke-width="1"/>
-  <g transform="translate(14, 14)">
-    <polygon points="18 3 33 11.5 33 24.5 18 33 3 24.5 3 11.5 18 3" stroke="#06b6d4" stroke-width="2.5" stroke-linejoin="round" fill="rgba(6,182,212,0.12)"/>
-    <line x1="18" y1="33" x2="18" y2="18" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
-    <polyline points="3 11.5 18 18 33 11.5" stroke="#06b6d4" stroke-width="2.5" stroke-linejoin="round"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="22" fill="#09090b"/>
+  <rect x="2" y="2" width="96" height="96" rx="20" stroke="#27272a" stroke-width="2"/>
+  <defs>
+    <linearGradient id="nl-right-grad" x1="74" y1="16" x2="74" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#29b6f6" />
+      <stop offset="55%" stop-color="#4f7df9" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="nl-diag-grad" x1="20" y1="16" x2="80" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f4f4f5" />
+      <stop offset="100%" stop-color="#e0e7ff" />
+    </linearGradient>
+  </defs>
+  <path d="M18 43C18 40.8 19.8 39 22 39H24C25.3 39 26.5 39.6 27.3 40.6L35.8 52.4C36.6 53.5 37 54.8 37 56.2V79C37 81.2 35.2 83 33 83H22C19.8 83 18 81.2 18 79V43Z" fill="#fafafa"/>
+  <path d="M20.5 17H35.5C37.4 17 39.2 17.9 40.3 19.4L82.2 78.2C83.7 80.2 82.2 83 79.8 83H65.5C63.6 83 61.8 82.1 60.7 80.6L18.8 21.8C17.3 19.8 18.8 17 21.2 17H20.5Z" fill="url(#nl-diag-grad)"/>
+  <path d="M63 21C63 18.8 64.8 17 67 17H78C80.2 17 82 18.8 82 21V65.5C82 67.2 79.9 68 78.9 66.6L63.8 45.2C63.3 44.5 63 43.6 63 42.7V21Z" fill="url(#nl-right-grad)"/>
 </svg>

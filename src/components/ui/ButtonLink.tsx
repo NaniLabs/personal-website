@@ -11,12 +11,6 @@ interface ButtonLinkProps {
   className?: string
 }
 
-const variants = {
-  primary:
-    'bg-[#f8fafc] text-[#09090b] font-semibold hover:bg-[#e2e8f0] transition-colors',
-  secondary: 'border border-[var(--color-border)] bg-[var(--color-bg-card)] text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)] transition-colors',
-  ghost: 'text-[var(--color-text-muted)] hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-text)] transition-colors',
-}
 
 export function ButtonLink({
   href,
@@ -26,9 +20,14 @@ export function ButtonLink({
   download = false,
   className,
 }: ButtonLinkProps) {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all duration-300 focus-ring'
+  const isPrimary = variant === 'primary'
+  const isSecondary = variant === 'secondary'
 
-  const borderStyle = variant === 'secondary' ? 'border-[var(--color-border)]' : 'border-transparent'
+  const baseClass = isPrimary
+    ? 'btn-primary'
+    : isSecondary
+    ? 'btn-secondary'
+    : 'btn-ghost'
 
   return (
     <a
@@ -36,7 +35,8 @@ export function ButtonLink({
       target={external ? '_blank' : undefined}
       rel={external ? 'noreferrer' : undefined}
       download={download}
-      className={cn(baseStyles, borderStyle, variants[variant], className)}
+      className={cn(baseClass, className)}
+      style={isPrimary ? { color: '#09090b', backgroundColor: '#fafafa' } : undefined}
     >
       <span>{label}</span>
       {download ? <Download className="h-4 w-4" /> : external ? <ArrowUpRight className="h-4 w-4" /> : null}

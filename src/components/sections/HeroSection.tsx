@@ -1,4 +1,4 @@
-import { MapPin, Sparkles } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 import { ButtonLink } from '@/components/ui/ButtonLink'
 import type { PortfolioData } from '@/types/content'
@@ -14,19 +14,19 @@ export function HeroSection({ portfolio }: HeroSectionProps) {
 
   return (
     <section className="w-full border-b border-[var(--color-border)]">
-      <div className="section-shell animate-enter pt-16 pb-12 sm:pt-24 sm:pb-18">
+      <div className="section-shell animate-enter pt-16 pb-12 sm:pt-20 sm:pb-16">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-              <Sparkles className="h-3.5 w-3.5" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3.5 py-1 text-xs font-medium text-[var(--color-text-subtle)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
               {hero.availability}
             </div>
 
-            <h1 className="mt-6 font-display text-4xl leading-none font-bold tracking-tight text-[var(--color-text)] sm:text-6xl">
+            <h1 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--color-text)]">
               {hero.name}
             </h1>
-            <p className="mt-5 max-w-2xl text-xl text-[var(--color-text-muted)] sm:text-2xl">{hero.role}</p>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--color-text-subtle)] sm:text-lg">{hero.summary}</p>
+            <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-muted)] sm:text-xl">{hero.role}</p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-text-subtle)]">{hero.summary}</p>
 
             <div className="mt-6 flex items-center gap-2 text-sm text-[var(--color-text-subtle)]">
               <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />

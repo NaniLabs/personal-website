@@ -8,18 +8,18 @@
   --color-bg-elevated: #0f1115;
   --color-bg-card: #111318;
   --color-border: #1e2026;
-  --color-border-hover: #22d3ee;
+  --color-border-hover: #818cf8;
 
   --color-text: #f5f5f5;
   --color-text-muted: #a1a1aa;
   --color-text-subtle: #71717a;
 
-  --color-accent: #22d3ee;
-  --color-accent-dim: #06b6d4;
+  --color-accent: #818cf8;
+  --color-accent-dim: #6366f1;
 
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
   --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 32px rgba(34, 211, 238, 0.12);
+  --shadow-glow: 0 0 32px rgba(129, 140, 248, 0.14);
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
@@ -46,12 +46,16 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4.5rem;
 }
 
-main section {
-  scroll-snap-align: start;
+@media (hover: hover) and (pointer: fine) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  main section {
+    scroll-snap-align: start;
+  }
 }
 
 main section:nth-of-type(odd) {

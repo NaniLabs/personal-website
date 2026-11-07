@@ -1,0 +1,20 @@
+import { useEffect, useState } from 'react'
+import type { PortfolioData } from '@/types/content'
+import { sectionIds } from '@/utils/content'
+
+type View = 'all' | 'experience' | 'education' | 'participations' | 'certificates'
+const ids = { experience: sectionIds.experience, education: sectionIds.education, participations: sectionIds.participations, certificates: sectionIds.certificates }
+export function TrajectorySection({ portfolio }: { portfolio: PortfolioData }) {
+  const [view, setView] = useState<View>('all')
+  const s = portfolio.content.sections
+  const en = portfolio.locale === 'en'
+  useEffect(() => {
+    const sync = () => { const key = (Object.keys(ids) as (keyof typeof ids)[]).find(k => '#' + ids[k] === window.location.hash); if (key) setView(key) }
+    const click = (event: MouseEvent) => { const anchor = (event.target as Element).closest('a'); const key = (Object.keys(ids) as (keyof typeof ids)[]).find(k => anchor?.hash === '#' + ids[k]); if (key) { setView(key); requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById(ids[key])?.scrollIntoView())) } }; sync(); window.addEventListener('hashchange', sync); document.addEventListener('click', click); return () => { window.removeEventListener('hashchange', sync); document.removeEventListener('click', click) }
+  }, [])
+  const tabs: [View, string][] = [['all', en ? 'Full view' : 'Vista completa'], ['experience', en ? 'Work experience' : 'Experiencia laboral'], ['education', en ? 'Education' : 'Formación académica'], ['participations', en ? 'Hackathons & events' : 'Hackatón & eventos'], ['certificates', en ? 'Certifications' : 'Certificaciones']]
+  return <section className="editorial-section trajectory"><div className="section-shell"><div className="trajectory-heading"><p className="small-label">{en ? 'Experience & learning' : 'Experiencia y aprendizaje'}</p><h2>{en ? 'A path in progress.' : 'Una trayectoria en marcha.'}</h2></div>
+    <div className="filter-row" role="group" aria-label={en ? 'Filter trajectory' : 'Filtrar trayectoria'}>{tabs.map(([key,label]) => <button type="button" className="filter-pill" aria-pressed={view === key} key={key} onClick={() => setView(key)}>{label}</button>)}</div>
+    <div key={view} className="trajectory-panel state-enter">{(['experience','education','participations','certificates'] as const).map(key => <div id={ids[key]} key={key} className="trajectory-group"><div hidden={view !== 'all' && view !== key}><h3>{s[key].title}</h3><div>{(key === 'experience' || key === 'education') && s[key].items.map(item => <article className="trajectory-entry" key={item.title}><p className="entry-date">{item.period}</p><div><h4>{item.title}</h4><p className="entry-subtitle">{item.subtitle}</p><p>{item.description}</p>{item.achievements.length > 0 && <ul>{item.achievements.map(a => <li key={a}>{a}</li>)}</ul>}</div></article>)}{key === 'participations' && s.participations.items.map(item => <article className="trajectory-entry" key={item.name}><p className="entry-date">{item.year}</p><div><h4>{item.name}</h4><p>{item.description}</p>{item.result && <p className="entry-subtitle">{item.result}</p>}</div></article>)}{key === 'certificates' && (s.certificates.items.length ? s.certificates.items.map(item => <article className="trajectory-entry" key={item.name}><p className="entry-date">{item.date}</p><div><h4>{item.name}</h4><p>{item.organization}</p>{item.pdf && <a href={item.pdf}>PDF</a>} {item.link && <a href={item.link} target="_blank" rel="noreferrer">{en ? 'Credential' : 'Credencial'} ↗</a>}</div></article>) : <p className="certificate-note">{s.certificates.description}</p>)}</div></div></div>)}</div>
+  </div></section>
+}

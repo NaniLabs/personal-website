@@ -28,7 +28,7 @@ export function Navbar({ portfolio }: NavbarProps) {
     <header className="sticky top-0 z-50 border-b bg-[var(--color-bg)]/80 backdrop-blur-xl" style={{ borderColor: 'var(--color-border)' }}>
       <div className="section-shell flex items-center justify-between py-4">
         <div className="flex items-center gap-3">
-          <a href="/" className="font-display text-lg font-semibold tracking-tight text-[var(--color-text)]" aria-label="Inicio">
+          <a href="/" className="font-display text-lg font-semibold tracking-tight text-[var(--color-text)]" aria-label={locale === 'es' ? 'Inicio' : 'Home'}>
             {portfolio.site.siteName}
           </a>
           <a
@@ -41,12 +41,12 @@ export function Navbar({ portfolio }: NavbarProps) {
             <svg className="h-3.5 w-3.5" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
                 <linearGradient id="nl-cv-right" x1="74" y1="16" x2="74" y2="70" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#d4a373" />
-                  <stop offset="55%" stopColor="#c59464" />
-                  <stop offset="100%" stopColor="#b88655" />
+                  <stop offset="0%" stopColor="#A84B2B" />
+                  <stop offset="55%" stopColor="#A84B2B" />
+                  <stop offset="100%" stopColor="#A84B2B" />
                 </linearGradient>
               </defs>
-              <path d="M16 42C16 39.8 17.8 38 20 38H22.5C23.8 38 25 38.6 25.8 39.6L34.8 52.2C35.6 53.3 36 54.6 36 56V80C36 82.2 34.2 84 32 84H20C17.8 84 16 82.2 16 80V42Z" fill="#fafafa" />
+              <path d="M16 42C16 39.8 17.8 38 20 38H22.5C23.8 38 25 38.6 25.8 39.6L34.8 52.2C35.6 53.3 36 54.6 36 56V80C36 82.2 34.2 84 32 84H20C17.8 84 16 82.2 16 80V42Z" fill="#181512" />
               <path d="M18.5 16H34.5C36.4 16 38.2 16.9 39.3 18.4L83.2 79.2C84.7 81.2 83.2 84 80.8 84H65.5C63.6 84 61.8 83.1 60.7 81.6L16.8 20.8C15.3 18.8 16.8 16 19.2 16H18.5Z" fill="#fafafa" />
               <path d="M64 20C64 17.8 65.8 16 68 16H80C82.2 16 84 17.8 84 20V66.5C84 68.2 81.9 69 80.9 67.6L64.8 45.2C64.3 44.5 64 43.6 64 42.7V20Z" fill="url(#nl-cv-right)" />
             </svg>

@@ -20,6 +20,12 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
     website: '', // honeypot
   })
 
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle')
+  const copyEmail = async () => {
+    try { await navigator.clipboard.writeText(email); setCopyStatus('copied') }
+    catch { setCopyStatus('error') }
+  }
+
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string; message?: string }>({})
@@ -118,6 +124,8 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
                 <Mail className="h-4 w-4 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
                 {email}
               </a>
+              <div><button type="button" className="copy-button" onClick={copyEmail}>{copyStatus === 'copied' ? (portfolio.locale === 'es' ? 'Email copiado ✓' : 'Email copied ✓') : (portfolio.locale === 'es' ? 'Copiar email' : 'Copy email')}</button><span className="copy-status" role="status">{copyStatus === 'error' ? (portfolio.locale === 'es' ? 'No se pudo copiar. Usá el enlace de email.' : 'Could not copy. Use the email link.') : copyStatus === 'copied' ? (portfolio.locale === 'es' ? 'Email copiado' : 'Email copied') : ''}</span></div>
+
 
               {phone && (
                 <a

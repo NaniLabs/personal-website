@@ -48,7 +48,7 @@
     "hero": {
       "name": "Ignacio Exequiel Meoniz",
       "role": "Information Systems Student & Developer",
-      "summary": "Information Systems and Systems Analyst student at UADER. Interested in software development, automation, and data analysis. Practical experience in technical support and personal project development using C++, Dart, Flutter, Python, Qt, and SQLite.",
+      "summary": "I build cross-platform applications (Flutter, C++, Python) and serverless web platforms on Cloudflare. Information Systems student at UADER and founder of NaniLabs.",
       "location": "Oro Verde, Entre Ríos, Argentina",
       "availability": "Open to projects and new challenges",
       "photo": "/images/profile.jpg",
@@ -89,7 +89,7 @@
       "title": "About Me",
       "description": "Information Systems student focused on software development, automation, and IT support.",
       "body": [
-        "Information Systems and Systems Analyst student at UADER. Interested in software development, automation, and data analysis. Practical experience in technical support and personal project development using C++, Dart, Flutter, Python, Qt, and SQLite."
+        "I focus on practical problems: connecting devices over local networks, automating desktop tasks, and providing independent IT support. I work through experimentation, with attention to usefulness and detail."
       ]
     },
     "technologies": {
@@ -99,11 +99,19 @@
       "categories": [
         {
           "category": "Programming",
-          "items": ["C++", "Dart", "Python", "JavaScript (basic)"]
+          "items": [
+            "C++",
+            "Dart",
+            "Python",
+            "JavaScript (basic)"
+          ]
         },
         {
           "category": "Databases",
-          "items": ["SQLite", "SQL (basic)"]
+          "items": [
+            "SQLite",
+            "SQL (basic)"
+          ]
         },
         {
           "category": "Tools",
@@ -165,7 +173,14 @@
           "tag": "Web Platform · Multi-tenant",
           "description": "Modular web platform for retail and technical service businesses centralizing inventory, sales, work orders, Mercado Pago integrated payments, and billing.",
           "image": "/images/projects/nanilabs-saas.png",
-          "technologies": ["React", "TypeScript", "Tailwind CSS", "Cloudflare Workers", "D1 SQLite", "Mercado Pago"],
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Cloudflare Workers",
+            "D1 SQLite",
+            "Mercado Pago"
+          ],
           "demo": "https://saas.nanilabs.lat",
           "featuredButtonLabel": "Open saas.nanilabs.lat",
           "featured": true,
@@ -177,7 +192,13 @@
           "tag": "Android & Windows · Local LAN",
           "description": "Cross-platform suite for Android and Windows that connects and controls devices directly over local Wi-Fi/Ethernet without external servers. Includes media control, multi-file transfer, shared clipboard, Wake-on-LAN, and notifications.",
           "image": "/images/projects/doublelink.png",
-          "technologies": ["Flutter", "Dart", "Kotlin", "Win32 C++", "WebSocket"],
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "Kotlin",
+            "Win32 C++",
+            "WebSocket"
+          ],
           "demo": "https://doublelink.nanilabs.lat",
           "featured": false,
           "order": 2
@@ -188,7 +209,13 @@
           "tag": "OpenAI Hackathon 2026 · Web, Android & Windows",
           "description": "Inverse price calculator for Mercado Libre sellers that solves the exact listing price from your target net payout, factoring in category commissions, interest-free installments, fixed fees, and shipping.",
           "image": "/images/projects/dobre.png",
-          "technologies": ["Flutter", "Dart", "React", "TypeScript", "Cloudflare"],
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "React",
+            "TypeScript",
+            "Cloudflare"
+          ],
           "demo": "https://dobre.nanilabs.lat",
           "featured": false,
           "order": 3
@@ -199,7 +226,13 @@
           "tag": "Main Repository · Free Software",
           "description": "NaniLabs open-source branch grouping free desktop utilities (including Aquamarine and OrganEyes) as direct, ad-free alternatives to everyday commercial tools.",
           "image": "/images/projects/nanilabs_logo.png",
-          "technologies": ["C++", "Python", "Qt Framework", "SQLite", "Open Source"],
+          "technologies": [
+            "C++",
+            "Python",
+            "Qt Framework",
+            "SQLite",
+            "Open Source"
+          ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 4
@@ -210,7 +243,11 @@
           "tag": "Part of FreeSoft · Desktop Application",
           "description": "Local inventory, sales, and repair order management system for technical service shops, developed within the FreeSoft branch.",
           "image": "/images/projects/aquamarine.png",
-          "technologies": ["C++", "Qt", "SQLite"],
+          "technologies": [
+            "C++",
+            "Qt",
+            "SQLite"
+          ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 5
@@ -221,7 +258,11 @@
           "tag": "Part of FreeSoft · Windows Utility",
           "description": "Lightweight Windows utility included in the FreeSoft repository that automatically classifies and organizes files by extension and type.",
           "image": "/images/projects/organeyes.png",
-          "technologies": ["Python", "Tkinter", "Windows"],
+          "technologies": [
+            "Python",
+            "Tkinter",
+            "Windows"
+          ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 6

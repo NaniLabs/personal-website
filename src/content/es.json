@@ -48,7 +48,7 @@
     "hero": {
       "name": "Ignacio Exequiel Meoniz",
       "role": "Estudiante de Sistemas de Información & Desarrollador",
-      "summary": "Estudiante de Licenciatura y Analista en Sistemas de Información en UADER. Interesado en desarrollo de software, automatización y análisis de datos. Experiencia práctica en soporte técnico y desarrollo de proyectos personales utilizando C++, Dart, Flutter, Python, Qt y SQLite.",
+      "summary": "Desarrollo aplicaciones multiplataforma (Flutter, C++, Python) y plataformas web serverless en Cloudflare. Estudiante de Licenciatura en Sistemas de Información (UADER) y fundador de NaniLabs.",
       "location": "Oro Verde, Entre Ríos, Argentina",
       "availability": "Disponible para proyectos y nuevos desafíos",
       "photo": "/images/profile.jpg",
@@ -89,7 +89,7 @@
       "title": "Sobre mí",
       "description": "Estudiante de Sistemas de Información enfocado en desarrollo de software, automatización y soporte técnico.",
       "body": [
-        "Estudiante de Licenciatura y Analista en Sistemas de Información en UADER. Interesado en desarrollo de software, automatización y análisis de datos. Experiencia práctica en soporte técnico y desarrollo de proyectos personales utilizando C++, Dart, Flutter, Python, Qt y SQLite."
+        "Me interesa resolver problemas concretos: conectar dispositivos en redes locales, automatizar tareas de escritorio y brindar soporte informático independiente. Trabajo desde la experimentación, con atención a la utilidad y a los detalles."
       ]
     },
     "technologies": {
@@ -99,11 +99,19 @@
       "categories": [
         {
           "category": "Programación",
-          "items": ["C++", "Dart", "Python", "JavaScript (básico)"]
+          "items": [
+            "C++",
+            "Dart",
+            "Python",
+            "JavaScript (básico)"
+          ]
         },
         {
           "category": "Bases de datos",
-          "items": ["SQLite", "SQL (básico)"]
+          "items": [
+            "SQLite",
+            "SQL (básico)"
+          ]
         },
         {
           "category": "Herramientas",
@@ -165,7 +173,14 @@
           "tag": "Plataforma Web · Multi-tenant",
           "description": "Plataforma web modular para comercios y servicios técnicos que centraliza inventario, ventas, órdenes de trabajo, pagos integrados con Mercado Pago y facturación.",
           "image": "/images/projects/nanilabs-saas.png",
-          "technologies": ["React", "TypeScript", "Tailwind CSS", "Cloudflare Workers", "D1 SQLite", "Mercado Pago"],
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Cloudflare Workers",
+            "D1 SQLite",
+            "Mercado Pago"
+          ],
           "demo": "https://saas.nanilabs.lat",
           "featuredButtonLabel": "Abrir saas.nanilabs.lat",
           "featured": true,
@@ -177,7 +192,13 @@
           "tag": "Android & Windows · Red Local LAN",
           "description": "Suite multiplataforma para Android y Windows que comunica y controla dispositivos directamente por red local Wi-Fi/Ethernet sin servidores externos. Incluye control multimedia, transferencia multi-archivo, portapapeles compartido, Wake-on-LAN y notificaciones.",
           "image": "/images/projects/doublelink.png",
-          "technologies": ["Flutter", "Dart", "Kotlin", "Win32 C++", "WebSocket"],
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "Kotlin",
+            "Win32 C++",
+            "WebSocket"
+          ],
           "demo": "https://doublelink.nanilabs.lat",
           "featured": false,
           "order": 2
@@ -188,7 +209,13 @@
           "tag": "Hackatón OpenAI 2026 · Web, Android y Windows",
           "description": "Calculadora inversa para vendedores de Mercado Libre que determina el precio exacto de publicación a partir del monto neto que querés recibir, contemplando comisión por rubro, cuotas sin interés, cargos fijos y envío.",
           "image": "/images/projects/dobre.png",
-          "technologies": ["Flutter", "Dart", "React", "TypeScript", "Cloudflare"],
+          "technologies": [
+            "Flutter",
+            "Dart",
+            "React",
+            "TypeScript",
+            "Cloudflare"
+          ],
           "demo": "https://dobre.nanilabs.lat",
           "featured": false,
           "order": 3
@@ -199,7 +226,13 @@
           "tag": "Repositorio Principal · Software Libre",
           "description": "Rama e iniciativa de software libre de NaniLabs que agrupa utilidades de escritorio gratuitas y de código abierto (incluyendo Aquamarine y OrganEyes) como alternativas directas sin publicidad ni suscripciones.",
           "image": "/images/projects/nanilabs_logo.png",
-          "technologies": ["C++", "Python", "Qt Framework", "SQLite", "Open Source"],
+          "technologies": [
+            "C++",
+            "Python",
+            "Qt Framework",
+            "SQLite",
+            "Open Source"
+          ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 4
@@ -210,7 +243,11 @@
           "tag": "Parte de FreeSoft · Aplicación de Escritorio",
           "description": "Sistema local de gestión de inventario, ventas y órdenes de reparación para servicio técnico, desarrollado dentro de la rama FreeSoft.",
           "image": "/images/projects/aquamarine.png",
-          "technologies": ["C++", "Qt", "SQLite"],
+          "technologies": [
+            "C++",
+            "Qt",
+            "SQLite"
+          ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 5
@@ -221,7 +258,11 @@
           "tag": "Parte de FreeSoft · Utilidad para Windows",
           "description": "Herramienta ligera para Windows integrada en el repositorio FreeSoft que clasifica y organiza archivos automáticamente según su extensión y tipo.",
           "image": "/images/projects/organeyes.png",
-          "technologies": ["Python", "Tkinter", "Windows"],
+          "technologies": [
+            "Python",
+            "Tkinter",
+            "Windows"
+          ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 6

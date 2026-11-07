@@ -38,7 +38,7 @@ export function CertificatesSection({ portfolio }: CertificatesSectionProps) {
                       </a>
                     ) : null}
                     {item.link ? (
-                      <a href={item.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:border-cyan-400 transition-colors">
+                      <a href={item.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/30 text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors">
                         <ExternalLink className="h-3.5 w-3.5" />
                         Ver credencial
                       </a>

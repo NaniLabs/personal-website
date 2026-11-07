@@ -4,22 +4,22 @@
   --font-sans: "Inter Tight", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
 
-  --color-bg: #09090b;
-  --color-bg-elevated: #0f1115;
-  --color-bg-card: #111318;
-  --color-border: #1e2026;
-  --color-border-hover: #818cf8;
+  --color-bg: #0b0a09;
+  --color-bg-elevated: #12100e;
+  --color-bg-card: #171412;
+  --color-border: #26221e;
+  --color-border-hover: #d4a373;
 
-  --color-text: #f5f5f5;
-  --color-text-muted: #a1a1aa;
-  --color-text-subtle: #71717a;
+  --color-text: #f5f3ef;
+  --color-text-muted: #a8a29e;
+  --color-text-subtle: #78716c;
 
-  --color-accent: #818cf8;
-  --color-accent-dim: #6366f1;
+  --color-accent: #d4a373;
+  --color-accent-dim: #b88655;
 
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
   --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 32px rgba(129, 140, 248, 0.14);
+  --shadow-glow: 0 0 32px rgba(212, 163, 115, 0.14);
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
@@ -59,11 +59,11 @@ html {
 }
 
 main section:nth-of-type(odd) {
-  background-color: #09090b;
+  background-color: #0b0a09;
 }
 
 main section:nth-of-type(even) {
-  background-color: #12151b;
+  background-color: #12100e;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -99,7 +99,7 @@ body {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.25);
+  background: rgba(212, 163, 115, 0.25);
   color: #fff;
 }
 
@@ -150,7 +150,7 @@ body {
   border: 1px solid var(--color-border);
   background-color: var(--color-bg-card);
   box-shadow: var(--shadow-card);
-  transition: all var(--transition-base);
+  transition: border-color 180ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), color 180ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1), opacity 180ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .panel:hover {
@@ -281,7 +281,7 @@ body {
 
 .badge-accent {
   border: 1px solid var(--color-accent);
-  background-color: rgba(34, 211, 238, 0.1);
+  background-color: rgba(212, 163, 115, 0.1);
   color: var(--color-accent);
 }
 
@@ -468,16 +468,16 @@ body {
   padding: 0.625rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #09090b !important;
+  color: #0b0a09 !important;
   box-shadow: none;
-  transition: all var(--transition-base);
+  transition: border-color 180ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), color 180ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1), opacity 180ms cubic-bezier(0.23, 1, 0.32, 1);
   outline: none;
 }
 
 .btn-primary:hover {
   background: #e4e4e7;
   border-color: #e4e4e7;
-  color: #09090b !important;
+  color: #0b0a09 !important;
 }
 
 .btn-primary:focus-visible {
@@ -500,7 +500,7 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-text);
-  transition: all var(--transition-base);
+  transition: border-color 180ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), color 180ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1), opacity 180ms cubic-bezier(0.23, 1, 0.32, 1);
   outline: none;
 }
 
@@ -527,7 +527,7 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-text-muted);
-  transition: all var(--transition-base);
+  transition: border-color 180ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), color 180ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1), opacity 180ms cubic-bezier(0.23, 1, 0.32, 1);
   outline: none;
 }
 
@@ -601,7 +601,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .lang-btn-active {
@@ -635,7 +635,7 @@ body {
   color: var(--color-text);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(8px);
-  transition: all var(--transition-base);
+  transition: border-color 180ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), color 180ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1), opacity 180ms cubic-bezier(0.23, 1, 0.32, 1);
   outline: none;
 }
 

@@ -39,7 +39,7 @@ export function ParticipationsSection({ portfolio }: ParticipationsSectionProps)
                   </div>
                 </div>
                 {item.result ? (
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono text-cyan-400 self-start sm:self-auto shrink-0">
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-3.5 py-1 text-xs font-mono text-[var(--color-accent)] self-start sm:self-auto shrink-0">
                     <Trophy className="h-3.5 w-3.5" aria-hidden="true" />
                     {item.result}
                   </div>

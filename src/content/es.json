@@ -221,7 +221,7 @@
           "tag": "Parte de FreeSoft · Utilidad para Windows",
           "description": "Herramienta ligera para Windows integrada en el repositorio FreeSoft que clasifica y organiza archivos automáticamente según su extensión y tipo.",
           "image": "/images/projects/organeyes.png",
-          "technologies": ["Python", "PyQt", "Windows"],
+          "technologies": ["Python", "Tkinter", "Windows"],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,
           "order": 6

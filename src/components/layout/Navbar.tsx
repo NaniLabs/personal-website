@@ -41,9 +41,9 @@ export function Navbar({ portfolio }: NavbarProps) {
             <svg className="h-3.5 w-3.5" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
                 <linearGradient id="nl-cv-right" x1="74" y1="16" x2="74" y2="70" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#29b6f6" />
-                  <stop offset="55%" stopColor="#4f7df9" />
-                  <stop offset="100%" stopColor="#6366f1" />
+                  <stop offset="0%" stopColor="#d4a373" />
+                  <stop offset="55%" stopColor="#c59464" />
+                  <stop offset="100%" stopColor="#b88655" />
                 </linearGradient>
               </defs>
               <path d="M16 42C16 39.8 17.8 38 20 38H22.5C23.8 38 25 38.6 25.8 39.6L34.8 52.2C35.6 53.3 36 54.6 36 56V80C36 82.2 34.2 84 32 84H20C17.8 84 16 82.2 16 80V42Z" fill="#fafafa" />

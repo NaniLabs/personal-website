@@ -8,7 +8,6 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
   return <section id={sectionIds.about} className="hero-section">
     <div className="section-shell hero-layout">
       <div className="hero-copy">
-        <p className="hero-kicker">{portfolio.locale === 'es' ? 'Desarrollo independiente · Entre Ríos, Argentina' : 'Independent development · Entre Ríos, Argentina'}</p>
         <h1>{hero.name}</h1>
         <p className="hero-role">{hero.role}</p>
         <p className="hero-summary">{hero.summary}</p>

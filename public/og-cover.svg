@@ -1,9 +1,9 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#09090B"/>
-  <circle cx="290" cy="78" r="190" fill="#22D3EE" fill-opacity="0.15"/>
-  <circle cx="1050" cy="560" r="240" fill="#C026D3" fill-opacity="0.12"/>
-  <rect x="66" y="66" width="1068" height="498" rx="36" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08"/>
-  <text x="110" y="232" fill="white" font-family="Inter Tight, Arial, sans-serif" font-size="28" letter-spacing="8">PROFESSIONAL PORTFOLIO</text>
-  <text x="110" y="330" fill="white" font-family="Space Grotesk, Arial, sans-serif" font-size="84" font-weight="700">Scalable bilingual portfolio</text>
-  <text x="110" y="408" fill="#A3A3A3" font-family="Inter Tight, Arial, sans-serif" font-size="32">React, TypeScript, Vite, Tailwind CSS and Cloudflare Pages</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#101114"/>
+  <rect x="62" y="62" width="1076" height="506" fill="#17191e" stroke="#38393d"/>
+  <path d="M110 131h19v44h-19z M110 110h17l43 65h-17z M153 110h19v45l-19-27z" fill="#d99b52"/>
+  <text x="110" y="283" fill="#f2efe9" font-family="Georgia, serif" font-size="70">Ignacio Exequiel Meoniz</text>
+  <path d="M110 324h980" stroke="#38393d"/>
+  <text x="110" y="387" fill="#d99b52" font-family="Arial, sans-serif" font-size="25" letter-spacing="3">PORTFOLIO PERSONAL</text>
+  <text x="110" y="478" fill="#c7c1b8" font-family="Arial, sans-serif" font-size="23">ceo.nanilabs.lat</text>
 </svg>

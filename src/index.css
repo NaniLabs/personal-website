@@ -18,14 +18,14 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active { t
 .section-shell { width: 100%; max-width: 88rem; padding-inline: clamp(1.25rem, 4vw, 4rem); margin-inline: auto; }
 .editorial-section { padding-block: clamp(4rem, 8vw, 8rem); border-bottom: 1px solid var(--color-border); }
 .hero-section { border-bottom: 1px solid var(--color-border); }
-.hero-layout { display: grid; gap: 3rem; padding-block: clamp(3rem, 7vw, 7rem); align-items: end; }
+.hero-layout { display: grid; gap: 3rem; padding-block: clamp(2.5rem, 5vw, 5rem); align-items: end; }
 .hero-copy { max-width: 48rem; }
-.hero-kicker, .small-label { font-family: var(--font-mono); font-size: .7rem; line-height: 1.6; color: var(--color-accent); letter-spacing: .04em; }
-.hero-copy h1 { font-family: var(--font-display); font-size: clamp(4rem, 9.2vw, 9.5rem); font-weight: 400; line-height: .9; letter-spacing: -.055em; margin: 2rem 0 1.5rem; }
+.small-label { font-family: var(--font-mono); font-size: .7rem; line-height: 1.6; color: var(--color-accent); letter-spacing: .04em; }
+.hero-copy h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; line-height: 1.12; letter-spacing: -.01em; margin: 0 0 1rem; text-wrap: balance; }
 .hero-role { font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2.25rem); line-height: 1.2; }
-.hero-summary { max-width: 39rem; color: var(--color-text-muted); line-height: 1.8; margin-top: 1.5rem; }
+.hero-summary { max-width: 39rem; color: var(--color-text-muted); line-height: 1.8; margin-top: 1.25rem; }
 .hero-actions, .tag-list, .filter-row, .inspector-links { display: flex; flex-wrap: wrap; gap: .6rem; }
-.hero-actions { margin-top: 2rem; }
+.hero-actions { margin-top: 1.5rem; }
 .profile-dossier { background: var(--color-bg-elevated); padding: .75rem; border: 1px solid var(--color-border); }
 .profile-dossier figure { margin: 0; } .profile-dossier img { width: 100%; aspect-ratio: 1.12; object-fit: cover; object-position: center 30%; }
 .profile-dossier figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding: .9rem .25rem; font-size: .68rem; color: var(--color-text-subtle); }

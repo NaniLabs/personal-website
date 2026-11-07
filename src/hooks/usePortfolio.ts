@@ -16,6 +16,11 @@ export function usePortfolio(): PortfolioData {
     site,
     content: getContent(locale),
     alternateLocale: getAlternateLocale(locale),
-    setLocale,
+    setLocale: (next) => {
+      if (next === locale) return
+      const main = document.getElementById('main-content')
+      if (main && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) main.animate([{ opacity: 0.45 }, { opacity: 1 }], { duration: 300 })
+      setLocale(next)
+    },
   }
 }

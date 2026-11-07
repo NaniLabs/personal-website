@@ -59,3 +59,23 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active { t
 @media (min-width: 1024px) { .hero-layout { grid-template-columns: 1.2fr .6fr; } }
 @media (hover: hover) and (pointer: fine) { .btn-primary:hover { background: var(--color-accent-dim); } .btn-secondary:hover, .copy-button:hover, .filter-pill:hover, .tech-tag:hover { border-color: var(--color-accent); } .work-row:hover { color: var(--color-accent); } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+/* The dossier uses ink and paper tokens in both reading modes. */
+:root, [data-theme="dark"] { color-scheme: dark; --color-bg:#101114; --color-bg-elevated:#17191e; --color-bg-card:#1e2025; --color-border:#38393d; --color-text:#f2efe9; --color-text-muted:#c7c1b8; --color-text-subtle:#a69d91; --color-accent:#d99b52; --color-accent-dim:#b97b39; }
+[data-theme="light"] { color-scheme: light; --color-bg:#f6f3ec; --color-bg-elevated:#fffdf8; --color-bg-card:#ebe5da; --color-border:#d4cbbb; --color-text:#151618; --color-text-muted:#514d47; --color-text-subtle:#70685e; --color-accent:#9c5f1e; --color-accent-dim:#784715; }
+.dossier-header { position:sticky; top:0; z-index:50; background:var(--color-bg); border-bottom:1px solid var(--color-border); }
+.header-inner { min-height:4.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.header-name { font:500 1.25rem var(--font-display); white-space:nowrap; }
+.header-inner nav { display:flex; gap:1.5rem; color:var(--color-text-muted); font-size:.75rem; }
+.header-inner nav a:hover { color:var(--color-accent); }
+.header-controls { display:flex; align-items:center; gap:.5rem; }
+.theme-toggle { background:transparent; color:var(--color-text); border:1px solid var(--color-border); border-radius:99px; padding:.65rem .8rem; font-size:.7rem; white-space:nowrap; }
+.theme-toggle span { color:var(--color-accent); margin-left:.35rem; }
+.filter-pill[aria-pressed="true"], .tech-tag[aria-pressed="true"] { background:var(--color-accent); border-color:var(--color-accent); color:var(--color-bg); }
+.btn-primary { color:var(--color-bg); } .profile-dossier figcaption span:first-child { color:var(--color-accent); }
+.schematic { background:var(--color-bg-card); padding:2rem 1.5rem 1rem; overflow:hidden; }
+.schematic svg { width:100%; overflow:visible; } .schematic rect { fill:var(--color-bg-elevated); stroke:var(--color-accent); } .schematic circle { fill:var(--color-accent); } .schematic text { fill:var(--color-text); font: 11px var(--font-mono); } .schematic-line { stroke:var(--color-accent); stroke-width:2; stroke-dasharray:5 5; animation:signal 3s linear infinite; } .schematic > span { font: .65rem var(--font-mono); color:var(--color-text-subtle); } @keyframes signal { to { stroke-dashoffset:-40; } }
+.certificate-open { margin-top:.8rem; color:var(--color-accent); border:0; background:none; padding:0; text-decoration:underline; }
+.certificate-dialog { width:min(90vw, 52rem); max-height:90vh; background:var(--color-bg-elevated); color:var(--color-text); border:1px solid var(--color-border); padding:2rem; } .certificate-dialog::backdrop { background:#000a; } .certificate-dialog h3 { font:2rem var(--font-display); margin:1rem 0; } .certificate-dialog iframe { width:100%; height:55vh; border:0; } .certificate-dialog a { display:inline-block; margin:1rem 1rem 0 0; color:var(--color-accent); } .dialog-close { float:right; font-size:1.8rem; border:0; background:none; color:var(--color-text); }
+@media(max-width:700px) { .header-inner { flex-wrap:wrap; padding-block:.7rem; } .header-inner nav { order:3; width:100%; justify-content:space-between; } .header-name { font-size:1rem; } .theme-toggle { padding:.6rem; } }
+@media(prefers-reduced-motion:reduce) { .schematic-line { animation:none; } }

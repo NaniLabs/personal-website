@@ -2,7 +2,7 @@
   "locale": "en",
   "seo": {
     "title": "Ignacio Exequiel Meoniz | Portfolio",
-    "description": "Personal portfolio of Ignacio Exequiel Meoniz, Information Systems student at UADER. Projects in C++, Dart, Flutter, Python, Qt, and SQLite.",
+    "description": "I build web systems and cross-platform applications. Advanced Information Systems Engineering student at UTN FRP.",
     "keywords": [
       "Ignacio Exequiel Meoniz",
       "Portfolio",
@@ -47,8 +47,8 @@
   "sections": {
     "hero": {
       "name": "Ignacio Exequiel Meoniz",
-      "role": "Information Systems Student & Developer",
-      "summary": "I build cross-platform applications (Flutter, C++, Python) and serverless web platforms on Cloudflare. Information Systems student at UADER and founder of NaniLabs.",
+      "role": "Software developer · Founder of NaniLabs",
+      "summary": "I build web systems and cross-platform applications. Advanced Information Systems Engineering student at UTN FRP.",
       "location": "Oro Verde, Entre Ríos, Argentina",
       "availability": "Open to projects and new challenges",
       "photo": "/images/profile.jpg",
@@ -62,6 +62,12 @@
         {
           "label": "GitHub",
           "url": "https://github.com/NaniLabs",
+          "variant": "secondary",
+          "external": true
+        },
+        {
+          "label": "Personal GitHub",
+          "url": "https://github.com/ignaciomeoniz",
           "variant": "secondary",
           "external": true
         },
@@ -307,6 +313,13 @@
       "title": "Academic Background",
       "description": "University education and completed secondary education.",
       "items": [
+        {
+          "title": "Information Systems Engineering",
+          "subtitle": "Universidad Tecnológica Nacional — Facultad Regional Paraná (UTN FRP)",
+          "period": "In progress",
+          "description": "University studies in progress.",
+          "achievements": []
+        },
         {
           "title": "Bachelor's Degree in Information Systems",
           "subtitle": "Universidad Autónoma de Entre Ríos (UADER)",

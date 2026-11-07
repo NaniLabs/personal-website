@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react'
-import type { PortfolioData } from '@/types/content'
+import { useEffect, useRef, useState } from 'react'
+import type { CertificateItem, PortfolioData } from '@/types/content'
 import { sectionIds } from '@/utils/content'
 
 type View = 'all' | 'experience' | 'education' | 'participations' | 'certificates'
 const ids = { experience: sectionIds.experience, education: sectionIds.education, participations: sectionIds.participations, certificates: sectionIds.certificates }
 export function TrajectorySection({ portfolio }: { portfolio: PortfolioData }) {
   const [view, setView] = useState<View>('all')
+  const [certificate, setCertificate] = useState<CertificateItem | null>(null)
+  const dialog = useRef<HTMLDialogElement>(null)
+  useEffect(() => { if (!certificate || !dialog.current) return; const el = dialog.current; el.showModal(); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) el.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 260 }); return () => { if (el.open) el.close() } }, [certificate])
   const s = portfolio.content.sections
   const en = portfolio.locale === 'en'
   useEffect(() => {
@@ -16,5 +19,5 @@ export function TrajectorySection({ portfolio }: { portfolio: PortfolioData }) {
   return <section className="editorial-section trajectory"><div className="section-shell"><div className="trajectory-heading"><p className="small-label">{en ? 'Experience & learning' : 'Experiencia y aprendizaje'}</p><h2>{en ? 'A path in progress.' : 'Una trayectoria en marcha.'}</h2></div>
     <div className="filter-row" role="group" aria-label={en ? 'Filter trajectory' : 'Filtrar trayectoria'}>{tabs.map(([key,label]) => <button type="button" className="filter-pill" aria-pressed={view === key} key={key} onClick={() => setView(key)}>{label}</button>)}</div>
     <div key={view} className="trajectory-panel state-enter">{(['experience','education','participations','certificates'] as const).map(key => <div id={ids[key]} key={key} className="trajectory-group"><div hidden={view !== 'all' && view !== key}><h3>{s[key].title}</h3><div>{(key === 'experience' || key === 'education') && s[key].items.map(item => <article className="trajectory-entry" key={item.title}><p className="entry-date">{item.period}</p><div><h4>{item.title}</h4><p className="entry-subtitle">{item.subtitle}</p><p>{item.description}</p>{item.achievements.length > 0 && <ul>{item.achievements.map(a => <li key={a}>{a}</li>)}</ul>}</div></article>)}{key === 'participations' && s.participations.items.map(item => <article className="trajectory-entry" key={item.name}><p className="entry-date">{item.year}</p><div><h4>{item.name}</h4><p>{item.description}</p>{item.result && <p className="entry-subtitle">{item.result}</p>}</div></article>)}{key === 'certificates' && (s.certificates.items.length ? s.certificates.items.map(item => <article className="trajectory-entry" key={item.name}><p className="entry-date">{item.date}</p><div><h4>{item.name}</h4><p>{item.organization}</p>{item.pdf && <a href={item.pdf}>PDF</a>} {item.link && <a href={item.link} target="_blank" rel="noreferrer">{en ? 'Credential' : 'Credencial'} ↗</a>}</div></article>) : <p className="certificate-note">{s.certificates.description}</p>)}</div></div></div>)}</div>
-  </div></section>
+  </div>{certificate && <dialog ref={dialog} className="certificate-dialog" onClose={() => setCertificate(null)}><button className="dialog-close" type="button" onClick={() => setCertificate(null)} aria-label={en ? 'Close preview' : 'Cerrar vista previa'}>×</button><p className="small-label">{certificate.organization} · {certificate.date}</p><h3>{certificate.name}</h3>{certificate.image && <img src={certificate.image} alt={certificate.name}/>} {certificate.pdf && <><iframe title={certificate.name} src={certificate.pdf}/><a href={certificate.pdf} target="_blank" rel="noreferrer">{en ? 'Open PDF' : 'Abrir PDF'}</a></>} {certificate.link && <a href={certificate.link} target="_blank" rel="noreferrer">{en ? 'Verify credential' : 'Verificar credencial'}</a>}</dialog>}</section>
 }

@@ -2,7 +2,7 @@
   "locale": "es",
   "seo": {
     "title": "Ignacio Exequiel Meoniz | Portfolio",
-    "description": "Portfolio personal de Ignacio Exequiel Meoniz, estudiante de Licenciatura y Analista en Sistemas de Información en UADER. Proyectos en C++, Dart, Flutter, Python, Qt y SQLite.",
+    "description": "Desarrollo sistemas web y aplicaciones multiplataforma. Estudiante avanzado de Ingeniería en Sistemas de Información en UTN FRP.",
     "keywords": [
       "Ignacio Exequiel Meoniz",
       "Portfolio",
@@ -47,8 +47,8 @@
   "sections": {
     "hero": {
       "name": "Ignacio Exequiel Meoniz",
-      "role": "Estudiante de Sistemas de Información & Desarrollador",
-      "summary": "Desarrollo aplicaciones multiplataforma (Flutter, C++, Python) y plataformas web serverless en Cloudflare. Estudiante de Licenciatura en Sistemas de Información (UADER) y fundador de NaniLabs.",
+      "role": "Desarrollador de software · Fundador de NaniLabs",
+      "summary": "Desarrollo sistemas web y aplicaciones multiplataforma. Estudiante avanzado de Ingeniería en Sistemas de Información en UTN FRP.",
       "location": "Oro Verde, Entre Ríos, Argentina",
       "availability": "Disponible para proyectos y nuevos desafíos",
       "photo": "/images/profile.jpg",
@@ -62,6 +62,12 @@
         {
           "label": "GitHub",
           "url": "https://github.com/NaniLabs",
+          "variant": "secondary",
+          "external": true
+        },
+        {
+          "label": "GitHub personal",
+          "url": "https://github.com/ignaciomeoniz",
           "variant": "secondary",
           "external": true
         },
@@ -307,6 +313,13 @@
       "title": "Formación académica",
       "description": "Trayectoria educativa universitaria y educación secundaria completa.",
       "items": [
+        {
+          "title": "Ingeniería en Sistemas de Información",
+          "subtitle": "Universidad Tecnológica Nacional — Facultad Regional Paraná (UTN FRP)",
+          "period": "En curso",
+          "description": "Formación universitaria en curso.",
+          "achievements": []
+        },
         {
           "title": "Licenciatura en Sistemas de Información",
           "subtitle": "Universidad Autónoma de Entre Ríos (UADER)",

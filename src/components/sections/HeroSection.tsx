@@ -14,7 +14,8 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
         <div className="hero-actions">{hero.actions.map(action => <ButtonLink key={action.label} href={action.url} label={action.label} variant={action.variant} external={action.external} download={action.download} />)}</div>
       </div>
       <aside className="profile-dossier">
-        <figure><img src={hero.photo || portfolio.site.profileImage} alt={hero.name} /><figcaption><span>{hero.availability}</span><span><MapPin size={14} aria-hidden="true" /> {hero.location}</span></figcaption></figure>
+        <div className="profile-placeholder"><span className="profile-monogram" aria-hidden="true">IEM</span><span>{portfolio.locale === 'es' ? 'Sin foto temporalmente · Actualización pendiente' : 'Photo temporarily unavailable · Update pending'}</span></div>
+        <div className="profile-meta"><span>{hero.availability}</span><span><MapPin size={14} aria-hidden="true" /> {hero.location}</span></div>
         <div className="profile-note"><p className="small-label">{about.title}</p>{about.body.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       </aside>
     </div>

@@ -100,11 +100,11 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
 
   return (
     <section id={sectionIds.contact} className="w-full">
-      <div className="section-shell py-12 sm:py-16">
-        <div className="grid border-y border-[var(--color-border)] lg:grid-cols-[0.85fr_1.15fr]">
+      <div className="section-shell contact-shell">
+        <div className="contact-layout">
           {/* Information sidebar */}
-          <div className="border-b bg-[var(--color-bg-elevated)] p-6 sm:p-8 lg:border-r lg:border-b-0" style={{ borderColor: 'var(--color-border)' }}>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)]">
+          <div className="contact-info">
+            <p className="small-label">
               {portfolio.content.navigation.contact}
             </p>
             <h2 className="mt-4 font-display text-3xl text-[var(--color-text)]">{contact.title}</h2>
@@ -112,7 +112,7 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
 
             <div className="mt-8 space-y-4 text-sm text-[var(--color-text-muted)]">
               {contact.directEmailPrompt && (
-                <p className="text-xs font-medium uppercase tracking-[0.1em] text-[var(--color-text-subtle)]">
+                <p className="text-sm text-[var(--color-text-subtle)]">
                   {contact.directEmailPrompt}
                 </p>
               )}
@@ -160,9 +160,9 @@ export function ContactSection({ portfolio }: ContactSectionProps) {
           </div>
 
           {/* Form container */}
-          <div className="p-6 sm:p-8">
+          <div className="contact-form">
             {status === 'success' ? (
-              <div className="rounded-2xl border p-8 text-center bg-[var(--color-bg-elevated)] animate-enter" style={{ borderColor: 'var(--color-accent)' }}>
+              <div className="p-4 text-center animate-enter" style={{ borderColor: 'var(--color-accent)' }}>
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
                   <CheckCircle2 className="h-8 w-8" />
                 </div>

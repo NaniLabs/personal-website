@@ -5,7 +5,7 @@ import type { PortfolioData } from '@/types/content'
 import { sectionIds } from '@/utils/content'
 
 type Filter = 'all' | 'web' | 'multi' | 'free'
-const groups: Record<Exclude<Filter, 'all'>, string[]> = { web: ['nanilabs-saas', 'dobre'], multi: ['doublelink', 'dobre'], free: ['freesoft', 'aquamarine', 'organeyes'] }
+const groups: Record<Exclude<Filter, 'all'>, string[]> = { web: ['nanilabs-saas', 'dobre', 'relay'], multi: ['doublelink', 'dobre'], free: ['freesoft', 'organeyes'] }
 export function ProjectsSection({ portfolio }: { portfolio: PortfolioData }) {
   const section = portfolio.content.sections.projects
   const items = [...section.items].sort((a, b) => a.order - b.order)
@@ -16,7 +16,7 @@ export function ProjectsSection({ portfolio }: { portfolio: PortfolioData }) {
   const panel = useRef<HTMLElement>(null)
   useEffect(() => { if (panel.current && !matchMedia('(prefers-reduced-motion: reduce)').matches) panel.current.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 300, easing: 'ease-out' }) }, [project?.slug, filter, portfolio.locale])
   const en = portfolio.locale === 'en'
-  const diagrams: Record<string, string[]> = { 'nanilabs-saas': ['React / TypeScript', 'Cloudflare Workers', 'D1 / Mercado Pago'], doublelink: ['Android / Flutter', 'WebSocket · LAN', 'Windows / Win32'], dobre: ['Web / Flutter', 'Cálculo / Calculation', 'Cloudflare'], freesoft: ['FreeSoft', 'C++ / Python', 'Qt / SQLite'], aquamarine: ['Qt / C++', 'Gestión / Management', 'SQLite'], organeyes: ['Windows', 'Python / Tkinter', 'Archivos / Files'] }
+  const diagrams: Record<string, string[]> = { 'nanilabs-saas': ['React / TypeScript', 'Cloudflare Workers', 'D1 / Mercado Pago'], doublelink: ['Android / Flutter', 'WebSocket · LAN', 'Windows / Win32'], dobre: ['Web / Flutter', 'Cálculo / Calculation', 'Cloudflare'], relay: ['Redes / OAuth', 'Smart Scheduler · Queues', 'Workers AI / D1'], freesoft: ['FreeSoft', 'C++ / Python', 'Qt / SQLite'], organeyes: ['Windows', 'Python / Tkinter', 'Archivos / Files'] }
   const nodes = diagrams[project?.slug || ''] || []
   const filters: [Filter, string][] = [['all', (en ? 'All' : 'Todos') + ' (' + items.length + ')'], ['web', 'Web & Cloud'], ['multi', en ? 'Cross-platform' : 'Multiplataforma'], ['free', 'FreeSoft Open Source']]
   return <section id={sectionIds.projects} className="editorial-section"><div className="section-shell">

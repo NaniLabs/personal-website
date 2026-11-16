@@ -15,7 +15,7 @@
       "SQLite",
       "DoBre",
       "DoubleLink",
-      "Aquamarine",
+      "Relay",
       "OrganEyes",
       "FreeSoft"
     ],
@@ -51,7 +51,6 @@
       "summary": "I build web systems and cross-platform applications. Advanced Information Systems Engineering student at UTN FRP.",
       "location": "Oro Verde, Entre Ríos, Argentina",
       "availability": "Open to projects and new challenges",
-      "photo": "/images/profile.jpg",
       "actions": [
         {
           "label": "Download CV",
@@ -60,26 +59,20 @@
           "download": true
         },
         {
+          "label": "Visit NaniLabs",
+          "url": "https://nanilabs.lat",
+          "variant": "secondary",
+          "external": true
+        },
+        {
           "label": "GitHub",
           "url": "https://github.com/NaniLabs",
           "variant": "secondary",
           "external": true
         },
         {
-          "label": "Personal GitHub",
-          "url": "https://github.com/ignaciomeoniz",
-          "variant": "secondary",
-          "external": true
-        },
-        {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/in/ignacio-exequiel-meoniz-18881b415",
-          "variant": "secondary",
-          "external": true
-        },
-        {
-          "label": "Visit NaniLabs",
-          "url": "https://nanilabs.lat",
           "variant": "secondary",
           "external": true
         },
@@ -113,14 +106,7 @@
           ]
         },
         {
-          "category": "Databases",
-          "items": [
-            "SQLite",
-            "SQL (basic)"
-          ]
-        },
-        {
-          "category": "Tools",
+          "category": "Tools & Cloud",
           "items": [
             "Git",
             "GitHub",
@@ -133,20 +119,27 @@
           ]
         },
         {
-          "category": "IT & Systems",
+          "category": "Databases",
+          "items": [
+            "SQLite",
+            "SQL (basic)"
+          ]
+        },
+        {
+          "category": "Systems & Support",
           "items": [
             "Windows",
             "Technical support",
             "Basic networking",
             "Microsoft Office (Excel, Word)",
-            "Google Sheets"
-          ]
-        },
-        {
-          "category": "Other",
-          "items": [
+            "Google Sheets",
             "Technical documentation",
-            "AI tools applied to software development"
+            "AI tools applied to software development",
+            "Problem solving",
+            "Autonomous learning",
+            "Attention to detail",
+            "Adaptability",
+            "Independent work"
           ]
         },
         {
@@ -154,16 +147,6 @@
           "items": [
             "Spanish (Native)",
             "English (Reading comprehension and technical documentation comprehension)"
-          ]
-        },
-        {
-          "category": "Strengths",
-          "items": [
-            "Problem solving",
-            "Autonomous learning",
-            "Attention to detail",
-            "Adaptability",
-            "Independent work"
           ]
         }
       ]
@@ -227,6 +210,19 @@
           "order": 3
         },
         {
+          "slug": "relay",
+          "name": "Relay",
+          "tag": "In construction",
+          "description": "Multi-tenant SaaS for social media management, batch scheduling and AI analytics on Cloudflare Workers.",
+          "technologies": [
+            "Cloudflare Workers",
+            "AI"
+          ],
+          "demo": "https://relay.nanilabs.lat",
+          "featured": false,
+          "order": 4
+        },
+        {
           "slug": "freesoft",
           "name": "FreeSoft (Open Source Branch)",
           "tag": "Main Repository · Free Software",
@@ -238,21 +234,6 @@
             "Qt Framework",
             "SQLite",
             "Open Source"
-          ],
-          "github": "https://github.com/NaniLabs/FreeSoft",
-          "featured": false,
-          "order": 4
-        },
-        {
-          "slug": "aquamarine",
-          "name": "Aquamarine",
-          "tag": "Part of FreeSoft · Desktop Application",
-          "description": "Local inventory, sales, and repair order management system for technical service shops, developed within the FreeSoft branch.",
-          "image": "/images/projects/aquamarine.png",
-          "technologies": [
-            "C++",
-            "Qt",
-            "SQLite"
           ],
           "github": "https://github.com/NaniLabs/FreeSoft",
           "featured": false,

@@ -1,4 +1,42 @@
-User-agent: *
-Allow: /
+# +===========================================================================+
+# |                                                                           |
+# |   _   _               _  _            _                                   |
+# |  | \ | |  __ _  _ __ (_)| |     __ _ | |__   ___                          |
+# |  |  \| | / _` || '_ \| || |    / _` || '_ \ / __|                         |
+# |  | |\  || (_| || | | || || |___| (_| || |_) |\__ \                        |
+# |  |_| \_| \__,_||_| |_||_||_____|\__,_||_.__/ |___/  // FOUNDER DOSSIER    |
+# |                                                                           |
+# +---------------------------------------------------------------------------+
+# |  PROYECTO : Ignacio Exequiel Meoniz -- Portfolio & Dossier de Ingenieria  |
+# |  DOMINIO  : https://ceo.nanilabs.lat                                      |
+# |  TIPO     : Sitio publico profesional / Monografia de sistemas            |
+# |  ORIGEN   : Oro Verde, Entre Rios, Argentina                              |
+# +---------------------------------------------------------------------------+
+# |  POLITICA DE RASTREO (RFC 9309)                                           |
+# |  [PERMITIDO] Google Search, Google Images/Video y Google-Extended (Gemini)|
+# |  [PERMITIDO] OpenAI Search (OAI-SearchBot), ChatGPT-User y GPTBot         |
+# |  [PROTEGIDO] Endpoints de funciones (/api/) excluidos de indexacion       |
+# |  [BLOQUEADO] Cualquier otro rastreador, scraper o recolector (Disallow: /)|
+# +===========================================================================+
 
+# --- [01] Google Search & Gemini Ecosystem -----------------------------------
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+# --- [02] OpenAI Search & GPT Ecosystem --------------------------------------
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+# --- [03] Default Exclusion for All Other Crawlers ---------------------------
+User-agent: *
+Disallow: /
+
+# --- [04] Canonical Sitemap --------------------------------------------------
 Sitemap: https://ceo.nanilabs.lat/sitemap.xml

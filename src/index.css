@@ -134,24 +134,24 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active { t
 :root, [data-theme="dark"] { color-scheme:dark; --color-bg:#090a0d; --color-bg-alt:#090a0d; --color-bg-elevated:#101217; --color-bg-card:#161920; --color-border:#242934; --color-text:#f3f1ec; --color-text-muted:#9ca3af; --color-text-subtle:#6b7280; --color-accent:#e05336; --color-accent-dim:#bc3d25; --color-status:#10b981; --color-construction:#eab308; }
 [data-theme="light"] { color-scheme:light; --color-bg:#f3f0e8; --color-bg-alt:#f3f0e8; --color-bg-elevated:#faf8f3; --color-bg-card:#eae5d9; --color-border:#cfc8b8; --color-text:#111317; --color-text-muted:#4b525d; --color-text-subtle:#727985; --color-accent:#c84328; --color-accent-dim:#a8331e; --color-status:#0f766e; --color-construction:#8a6900; }
 .hero-section, .skills-section, .trajectory { background:var(--color-bg); }
-.hero-layout { padding-block:0; gap:1px; align-items:stretch; background:var(--color-border); border-inline:1px solid var(--color-border); }
+.hero-layout { padding:0; width:min(calc(78rem - 2 * clamp(1.25rem, 4vw, 4rem)), calc(100% - 2.5rem)); gap:1px; align-items:stretch; background:var(--color-border); border-inline:1px solid var(--color-border); }
 .hero-copy, .profile-dossier { min-width:0; background:var(--color-bg-elevated); }
-.hero-copy { max-width:none; padding:clamp(2rem, 5vw, 5rem); display:flex; flex-direction:column; justify-content:center; }
-.hero-eyebrow { color:var(--color-accent); font:500 .7rem/1.5 var(--font-mono); margin-bottom:2rem; }
-.hero-copy h1 { font-size:clamp(3rem, 6vw, 6rem); line-height:.98; }
+.hero-copy { max-width:none; padding:clamp(2rem, 4.5vw, 4.25rem); display:flex; flex-direction:column; justify-content:center; }
+.hero-eyebrow { color:var(--color-accent); font:500 .7rem/1.5 var(--font-mono); margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:.08em; }
+.hero-copy h1 { font-size:clamp(2.8rem, 4.8vw, 4.6rem); line-height:1.02; letter-spacing:-.025em; }
 .hero-role { margin-top:1rem; }
 .hero-actions { margin-top:2rem; }
 .profile-dossier { border:0; border-radius:0; box-shadow:none; padding:clamp(1.25rem, 3vw, 2.5rem); }
-.profile-placeholder { position:relative; min-height:16rem; display:grid; place-items:center; padding:1rem; border:1px solid var(--color-border); background:var(--color-bg-card); overflow:hidden; }
-.profile-reticle { width:min(100%, 18rem); height:13rem; fill:none; stroke:var(--color-accent); stroke-width:1; vector-effect:non-scaling-stroke; opacity:.75; }
+.profile-placeholder { position:relative; min-height:15rem; display:grid; place-items:center; padding:1rem; border:1px solid var(--color-border); background:var(--color-bg-card); overflow:hidden; }
+.profile-reticle { width:min(100%, 18rem); height:12rem; fill:none; stroke:var(--color-accent); stroke-width:1; vector-effect:non-scaling-stroke; opacity:.75; }
 .profile-monogram { position:absolute; top:50%; left:50%; transform:translate(-50%,-70%); font:400 2.5rem/1 var(--font-display); color:var(--color-text); background:var(--color-bg-card); padding:.5rem; }
-.profile-placeholder-status { position:absolute; bottom:1rem; left:1rem; right:1rem; text-align:center; font:500 .58rem/1.5 var(--font-mono); color:var(--color-text-muted); }
+.profile-placeholder-status { position:absolute; bottom:1rem; left:1rem; right:1rem; text-align:center; font:500 .58rem/1.5 var(--font-mono); color:var(--color-text-muted); letter-spacing:.06em; }
 .profile-meta { display:grid; gap:.8rem; padding:1.2rem 0; border-bottom:1px solid var(--color-border); font:.65rem/1.5 var(--font-mono); }
 .profile-meta span { display:flex; align-items:center; gap:.5rem; }
 .status-dot { width:.5rem; height:.5rem; flex:none; border-radius:50%; background:var(--color-status); }
 .profile-note { padding:1.25rem 0 0; background:none; border:0; }
-.btn-primary, .btn-secondary, .btn-ghost, .copy-button, .theme-toggle, .language-switch, .language-indicator { border-radius:2px; }
-.btn-primary { color:#fff; }
+.btn-primary, .btn-secondary, .btn-ghost, .copy-button, .theme-toggle, .language-switch, .language-indicator { border-radius:2px; font-family:var(--font-mono); letter-spacing:.04em; text-transform:uppercase; font-size:.7rem; }
+.btn-primary { background:var(--color-accent); border-color:var(--color-accent); color:#ffffff; }
 .filter-row { gap:.35rem; }
 .filter-pill, .tech-tag, .project-tech-tag { border-radius:3px; padding:.55rem .75rem; font:500 .68rem/1.3 var(--font-mono); }
 .filter-pill, .tech-tag { background:var(--color-bg-elevated); }
